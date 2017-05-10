@@ -1,0 +1,48 @@
+{
+    "name": "corifeus-web-material",
+    "version": "4.1.294-458",
+    "corifeus": {
+        "time": "5/6/2017, 3:06:22 AM",
+        "icon": "fa fa-tint",
+        "time-stamp": 1494032782233,
+        "code": "Amazing",
+        "publish": true
+    },
+    "description": "Corifeus Web Material - Amazing",
+    "main": "src/index.ts",
+    "directories": {
+        "test": "test"
+    },
+    "scripts": {
+        "test": "grunt"
+    },
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/patrikx3/corifeus-web-material.git"
+    },
+    "keywords": [
+        "corifeus",
+        "web",
+        "api"
+    ],
+    "author": "Patrik Laszlo <alabard@gmail.com>",
+    "bugs": {
+        "url": "https://github.com/patrikx3/corifeus-web-material/issues"
+    },
+    "homepage": "https://pages.corifeus.tk/corifeus-web-material",
+    "devDependencies": {
+        "corifeus-builder-angular": "^4.1.286-399"
+    },
+    "dependencies": {
+        "@angular/animations": "^4.1.1",
+        "@angular/material": "^2.0.0-beta.3",
+        "corifeus-web": "^4.1.288-410",
+        "font-awesome": "^4.7.0",
+        "hammerjs": "^2.0.8",
+        "lodash": "^4.17.4"
+    },
+    "engines": {
+        "node": ">=7.8.0"
+    }
+}

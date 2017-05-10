@@ -1,0 +1,46 @@
+@import "../../../src/scss/all";
+
+
+.cory-mat-sidenav {
+  padding: 20px;
+  width: 200px;
+  position: relative;
+}
+
+.cory-mat-sidenav-container {
+  background-color: transparent !important;
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.cory-mat-sidenav-content {
+  height: 100vh;
+  min-height: 100vh;
+}
+
+body {
+  height: 100vh;
+  min-height: 100vh;
+}
+
+.cory-mat-form-full-width md-input-container {
+  width: 100%;
+}
+
+cory-web-material-test-login {
+  .flex-container {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .row {
+    width: auto;
+  }
+  .flex-item {
+  }
+}
