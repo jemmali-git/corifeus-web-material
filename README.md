@@ -1,8 +1,7 @@
 [//]: #@corifeus-header
 
-[![Build Status](https://travis-ci.org/patrikx3/corifeus-web-material.svg?branch=master)](https://travis-ci.org/patrikx3/corifeus-web-material)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/patrikx3/corifeus-web-material/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/patrikx3/corifeus-web-material/?branch=master)
-[![Code Coverage](https://scrutinizer-ci.com/g/patrikx3/corifeus-web-material/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/patrikx3/corifeus-web-material/?branch=master)  [![Trello](https://img.shields.io/badge/Trello-Corifeus-026aa7.svg)](https://trello.com/b/3NArfcD1/corifeus)
+[![Build Status](https://travis-ci.org/patrikx3/corifeus-web-material.svg?branch=master)](https://travis-ci.org/patrikx3/corifeus-web-material)  [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/patrikx3/corifeus-web-material/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/patrikx3/corifeus-web-material/?branch=master)  [![Code Coverage](https://scrutinizer-ci.com/g/patrikx3/corifeus-web-material/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/patrikx3/corifeus-web-material/?branch=master)  [![Trello](https://img.shields.io/badge/Trello-Corifeus-026aa7.svg)](https://trello.com/b/3NArfcD1/corifeus)
+
   
 [![NPM](https://nodei.co/npm/corifeus-web-material.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/corifeus-web-material/)
 ------
@@ -10,10 +9,15 @@
 # Corifeus Web Material - Amazing
 
 ### Node Version Requirement 
-```>=7.8.0```  
+``` 
+>=7.8.0 
+```  
    
 The ```async``` and ```await``` keywords are required.
 
+Install NodeJs:    
+https://nodejs.org/en/download/package-manager/    
+  
 # Description
 
 
@@ -66,7 +70,7 @@ https://github.com/angular/material2/blob/master/src/lib/core/theming/_theming.s
 [//]: #@corifeus-footer
 
 ---
-[**CORIFEUS-WEB-MATERIAL**](https://pages.corifeus.tk/corifeus-web-material) Build v4.1.3-453 on 5/4/2017, 1:09:02 AM
+[**CORIFEUS-WEB-MATERIAL**](https://pages.corifeus.tk/corifeus-web-material) Build v4.1.298-5
 
 [Corifeus](http://github.com/patrikx3/corifeus) by [Patrik Laszlo](http://patrikx3.tk)
  

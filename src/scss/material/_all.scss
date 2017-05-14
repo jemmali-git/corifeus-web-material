@@ -7,7 +7,7 @@ body {
   margin: 0;
 }
 
-@import '~@angular/material/theming';
+@import '@angular/material/theming';
 @include mat-core();
 
 @import 'variables';
@@ -77,11 +77,13 @@ body.cory-mat-theme-dark {
     box-shadow: 0px 0px 100px 0px rgba(0,0,0,0.25) !important;
   }
 
+
   margin-left: 0;
   margin-right: 0;
 
   @media screen and (min-width: $cory-mat-size-xsmall) {
     margin-top: 20px;
+    margin-bottom: 20px;
     margin-left: 20px;
     margin-right: 20px;
   }
@@ -101,22 +103,6 @@ body {
   min-height: 100vh;
 }
 
-.cory-mat-container-fixed {
-
-  margin-top: $cory-mat-fixed-height-collapsed;
-  margin-bottom: $cory-mat-fixed-height-collapsed;
-
-  @media screen and (min-width: $cory-mat-size-xsmall) {
-    margin-top: $cory-mat-fixed-height;
-    margin-bottom: $cory-mat-fixed-height;
-  }
-
-  @media screen and (min-width: $cory-mat-size-medium) {
-    width: $cory-mat-size-medium - 100;
-    margin-left: auto;
-    margin-right: auto;
-  };
-}
 
 
 .cory-mat-header  {

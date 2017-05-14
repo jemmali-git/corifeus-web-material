@@ -102,7 +102,7 @@
 
   }
 
-  @return $cory-mat-color-paletta-obj;
+  @return mat-palette($cory-mat-color-paletta-obj);
 };
 
 @mixin cory-mat-theme-button($type, $theme) {

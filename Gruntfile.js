@@ -8,11 +8,7 @@ module.exports = (grunt) => {
             npmio: true
         }
     });
-
-
     grunt.registerTask('default', builder.config.task.build.angularAotJit);
     grunt.registerTask('run', builder.config.task.run.angular);
     grunt.registerTask('coverage', 'karma:cory-angular');
-
-
 }
