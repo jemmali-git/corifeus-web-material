@@ -80,7 +80,7 @@ https://github.com/angular/material2/blob/master/src/lib/core/theming/_theming.s
 [//]: #@corifeus-footer
 
 ---
-[**CORIFEUS-WEB-MATERIAL**](https://pages.corifeus.tk/corifeus-web-material) Build v4.1.343-33
+[**CORIFEUS-WEB-MATERIAL**](https://pages.corifeus.tk/corifeus-web-material) Build v4.1.346-36
 
 [Corifeus](http://www.corifeus.tk) by [Patrik Laszlo](http://patrikx3.tk)
 
