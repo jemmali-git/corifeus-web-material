@@ -66,7 +66,7 @@ https://github.com/angular/material2/issues/4229#issuecomment-296611188
 ```
 
 ## ElementRef Material
-The default ```@ViewChild``` is not ElementRef with Material.
+The default ```@ViewChild``` is not ElementcorifeuRef with Material.
 Need to use like:
 ```typescript
 @ViewChild('elementButton', {read: ElementRef}) elementButton : ElementRef;
@@ -77,10 +77,13 @@ https://github.com/angular/material2/blob/master/src/lib/core/theming/_theming.s
 ## Queue task
 * Override ```console.error``` as a Notify error
 
+## Colors
+monochromatic, analogous, complementary, tradic 
+
 [//]: #@corifeus-footer
 
 ---
-[**CORIFEUS-WEB-MATERIAL**](https://pages.corifeus.tk/corifeus-web-material) Build v4.1.348-38
+[**CORIFEUS-WEB-MATERIAL**](https://pages.corifeus.tk/corifeus-web-material) Build v4.1.354-42
 
 [Corifeus](http://www.corifeus.tk) by [Patrik Laszlo](http://patrikx3.tk)
 

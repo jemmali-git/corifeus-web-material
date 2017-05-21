@@ -4,6 +4,7 @@
   },
   "themes": {
     "material": {
+      "cory-mat-theme-dark-matrix" : "Matrix",
       "cory-mat-theme-light-forest" : "Erdő",
       "cory-mat-theme-dark-wood": "Fa",
       "cory-mat-theme-light-beach": "Strand",
