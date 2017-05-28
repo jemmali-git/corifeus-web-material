@@ -4,10 +4,10 @@
   },
   "themes": {
     "material": {
-      "cory-mat-theme-dark-matrix" : "Matrix",
       "cory-mat-theme-light-forest" : "Erdő",
       "cory-mat-theme-dark-wood": "Fa",
       "cory-mat-theme-light-beach": "Strand",
+      "cory-mat-theme-dark-matrix" : "Matrix",
       "cory-mat-theme-light-deeppurple-amber": "Mély lila borostyán",
       "cory-mat-theme-light-indigo-pink": "Indigó rózsaszín",
       "cory-mat-theme-dark-pink-bluegray": "Rózsaszín  kék-szürke",

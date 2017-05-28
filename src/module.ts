@@ -7,7 +7,7 @@ import { Boot } from './boot';
 
 import { ThemeService } from './services/theme'
 
-import { NotifyService, NotifyOptions } from './services/notify/notify'
+import { NotifyService } from './services/notify/notify'
 import { NotifyComponent } from './services/notify/notify-component'
 
 import { Http404 } from './component/cory-mat-http-404'
@@ -68,6 +68,7 @@ import { TranslationMenu } from './component/cory-mat-translation/cory-mat-trans
         Boot,
         ThemeService,
         NotifyService,
+
     ],
     exports: [
         CorifeusModule,
@@ -93,11 +94,7 @@ import { TranslationMenu } from './component/cory-mat-translation/cory-mat-trans
 })
 export class CorifeusMaterialModule {
 
-    constructor(
-        boot : Boot
-    ) {
-
-    }
+    constructor(boot : Boot) {}
 
     public static forRoot(): ModuleWithProviders {
         return {

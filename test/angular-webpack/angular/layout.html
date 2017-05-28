@@ -2,11 +2,6 @@
 <cory-mat-loading></cory-mat-loading>
 <md-sidenav-container class="cory-mat-sidenav-container">
     <md-sidenav align="end" #sidenav class="cory-mat-sidenav">
-        <div style="position: absolute; top: 15px; right: 5px;">
-            <button md-icon-button  (click)="sidenav.close()">
-                <md-icon>close</md-icon>
-            </button>
-        </div>
         <div style="font-size: 1.5em; opacity: 0.5;">
             {{ i18n.material.title.menu }}
         </div>
@@ -51,3 +46,9 @@
     </div>
 
 </md-sidenav-container>
+
+<div *ngIf="sidenav.opened" style="position: fixed; top: 5px; right: 5px; z-index: 3">
+    <button md-icon-button color="primary"  (click)="sidenav.close()">
+        <md-icon>close</md-icon>
+    </button>
+</div>

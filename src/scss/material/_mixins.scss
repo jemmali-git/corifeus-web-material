@@ -164,6 +164,23 @@
 
 }
 
+@mixin cory-mat-autofill() {
+  // fix webkit-autofill
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:active,
+  input.webkit-autofill,
+  input.webkit-autofill:focus,
+  input.webkit-autofill:active,
+  input.webkit-autofill:hover
+  {
+    transition: all 5000s ease-in-out 0s;
+    transition-property: background-color, color;
+    //    background-color: mat-color($mat-yellow, 500);
+  }
+}
+
 @mixin cory-mat-theme($type, $primary, $accent) {
 
   $theme: '';
@@ -250,18 +267,6 @@
 
   @include cory-mat-theme-container(mat-color($primary));
 
-  // fix webkit-autofill
-  input:-webkit-autofill,
-  input:-webkit-autofill:hover,
-  input:-webkit-autofill:focus,
-  input:-webkit-autofill:active,
-  input.webkit-autofill,
-  input.webkit-autofill:focus,
-  input.webkit-autofill:active,
-  input.webkit-autofill:hover
-  {
-    transition: all 5000s ease-in-out 0s;
-    transition-property: background-color, color;
-//    background-color: mat-color($mat-yellow, 500);
-  }
+  @include cory-mat-autofill();
+
 }
