@@ -40,6 +40,8 @@ export class Login implements AfterViewChecked {
 
     settings: any;
 
+    auto: boolean;
+
     @ViewChild('loginForm')
     loginForm: NgForm;
 
@@ -72,7 +74,7 @@ export class Login implements AfterViewChecked {
     async onSubmit() {
         try {
             this.elementForm.nativeElement.classList.remove('cory-shake')
-            const response = await this.auth.login(this.loginForm.value);
+            const info = await this.auth.login(this.loginForm.value);
             this.notify.info(this.i18n.message.loggedIn);
         } catch (e) {
             this.elementForm.nativeElement.classList.add('cory-shake')

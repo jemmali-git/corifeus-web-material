@@ -3,6 +3,10 @@ import {
 } from '@angular/core';
 
 import {
+    Response
+} from '@angular/http'
+
+import {
     isDevMode
 } from '@angular/core';
 
@@ -58,10 +62,19 @@ export class NotifyService  {
 
     }
 
-    error(error: Error) {
-        this.info(`${error.message}`, <NotifyOptions>{
-            icon: 'error'
-        });
+    error(error: Error|Response) {
+
+        if (error instanceof Error) {
+            this.info(`${error.message}`, <NotifyOptions>{
+                icon: 'error'
+            });
+        } else if (error instanceof Response) {
+            const message = error.json().message;
+            this.info(`${this.i18n.message[message]}`, <NotifyOptions>{
+                icon: 'error'
+            });
+        }
+
         console.error(error);
     }
 

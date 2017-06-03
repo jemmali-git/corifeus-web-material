@@ -35,6 +35,14 @@
 
         </md-card-content>
 
+        <md-checkbox
+                [checked]="auto"
+                align="start"
+                value="" ngModel name="auto"  #modelAuto="ngModel" #inputAuto
+                >
+            {{ i18n.title.autoLogin }}
+        </md-checkbox>
+
         <md-card-actions align="end">
 
             <button md-raised-button color="primary" type="submit" [disabled]="!loginForm.form.valid">

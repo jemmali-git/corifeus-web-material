@@ -23,7 +23,8 @@
     "error": "Hiba",
     "authorization": " Azonosítás",
     "username": "Felhasználó",
-    "password": "Jelszó"
+    "password": "Jelszó",
+    "autoLogin": "Maradj belépve"
   },
   "button": {
     "login": "Belépés"

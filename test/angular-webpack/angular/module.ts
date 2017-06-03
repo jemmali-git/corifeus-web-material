@@ -54,7 +54,7 @@ export class Module {
     constructor(
         private settings: SettingsService,
     ) {
-        const json = require('../json/settings.json');
+        const json = require('../json/settings.core.json');
         settings.extend('core', json);
     }
 };

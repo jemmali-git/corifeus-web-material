@@ -35,6 +35,39 @@
   );
 
 
+  $md-matrikxlow: (
+          50 : #e7f9e7,
+          100 : #c2f0c2,
+          200 : #99e699,
+          300 : #70db70,
+          400 : #52d452,
+          500 : #33cc33,
+          600 : #2ec72e,
+          700 : #27c027,
+          800 : #20b920,
+          900 : #14ad14,
+          A100 : #e0ffe0,
+          A200 : #adffad,
+          A400 : #7aff7a,
+          A700 : #60ff60,
+          contrast: (
+                  50 : #000000,
+                  100 : #000000,
+                  200 : #000000,
+                  300 : #000000,
+                  400 : #000000,
+                  500 : #000000,
+                  600 : #000000,
+                  700 : #000000,
+                  800 : #ffffff,
+                  900 : #ffffff,
+                  A100 : #000000,
+                  A200 : #000000,
+                  A400 : #000000,
+                  A700 : #000000,
+          )
+  );
+
 
 
 
@@ -108,29 +141,31 @@
 
 
 
-  $primary:  mat-palette($md-matrix);
-  $accent: mat-palette($md-matrixaccent);
-  $warn : mat-palette($md-matrixwarm);
 
+  $primary:  mat-palette($md-matrix);
+  $accent: mat-palette($md-matrikxlow);
+  $warn : mat-palette($md-matrixaccent);
 
   $white: map_get($md-matrix, 500);
   $white2: map_get($md-matrixaccent, 500);
 
   $foreground: (
           base:            $white, //white,
-          divider:         rgba($white2, 0.12), //$white-12-opacity,
-          dividers:        rgba($white2, 0.12), //$white-12-opacity,
-          disabled:        rgba($white2, 0.8), // rgba(white, 0.3),
-          disabled-button: rgba($white2, 0.3), // rgba(white, 0.3),
-          disabled-text:   rgba($white2, 0.3), // rgba(white, 0.3),
-          hint-text:       rgba($white2, 0.3), // rgba(white, 0.3),
-          secondary-text:  rgba($white2, 0.3), // rgba(white, 0.3),
-          icon:            $white2, // white,
-          icons:           $white2, // white,
+          divider:         rgba($white, 0.12), //$white-12-opacity,
+          dividers:        rgba($white, 0.12), //$white-12-opacity,
+          disabled:        rgba($white, 0.8), // rgba(white, 0.3),
+          disabled-button: rgba($white, 0.3), // rgba(white, 0.3),
+          disabled-text:   rgba($white, 0.3), // rgba(white, 0.3),
+          hint-text:       rgba($white, 0.3), // rgba(white, 0.3),
+          secondary-text:  rgba($white, 0.3), // rgba(white, 0.3),
+          icon:            $white, // white,
+          icons:           $white, // white,
           text:            $white, // white,
           slider-off:        $white, //rgba(white, 0.3),
           slider-off-active: $white, //rgba(white, 0.3),
   );
+
+
 
   $background: (
           status-bar: black,
@@ -145,6 +180,15 @@
           selected-button: rgba(black, 0.90), //map_get($mat-grey, 900),
           selected-disabled-button: rgba(black, 0.80), //map_get($mat-grey, 800),
           disabled-button-toggle: rgba(black, 1.00), //map_get($mat-grey, 1000),
+  );
+
+  $theme_highlight: (
+          primary: $warn,
+          accent: $primary,
+          warn: $accent,
+          is-dark: true,
+          foreground: $foreground,
+          background: $background,
   );
 
   $theme: (
@@ -168,12 +212,14 @@
   // @mixin angular-material-theme($theme) {
 
   @include mat-core-theme($theme);
+
   @include mat-autocomplete-theme($theme_reverse);
 
   // card
   @include mat-card-theme($theme_reverse);
 
   @include mat-checkbox-theme($theme_reverse);
+
   @include mat-chips-theme($theme_reverse);
   @include mat-dialog-theme($theme_reverse);
   @include mat-grid-list-theme($theme_reverse);
@@ -204,14 +250,19 @@
   //    background: linear-gradient(darken($color, 10%), $color);
   @include mat-button-toggle-theme($theme_reverse);
   @include mat-input-theme($theme_reverse);
+
   @include mat-slide-toggle-theme($theme_reverse);
-  @include mat-progress-bar-theme($theme_reverse);
-  @include mat-progress-spinner-theme($theme_reverse);
+
+
+  @include mat-progress-bar-theme($theme_highlight);
+  @include mat-progress-spinner-theme($theme_highlight);
   @include mat-toolbar-theme($theme_reverse);
   @include mat-button-theme($theme_reverse);
 
   @include cory-mat-theme-container(mat-color($primary));
+
   @include cory-mat-theme-toolbar('dark', $theme);
+
   @include cory-mat-theme-button('dark', $theme_reverse);
   @include cory-mat-theme-link(map_get($md-matrixaccent, 500), map_get($md-matrixaccent, A400));
 

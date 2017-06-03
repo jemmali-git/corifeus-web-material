@@ -17,9 +17,14 @@ import { NotifyService } from '../../../../src';
                     <cory-mat-login></cory-mat-login>
                                         
                     <br/>
-                    
+
+                                       
                     <button md-raised-button color="primary" (click)="verify()">
                         Verify
+                    </button>
+                    
+                    <button md-raised-button color="primary" (click)="prolongate()">
+                        Prolongate
                     </button>
                 </div>
             </div>
@@ -37,8 +42,20 @@ export class Login {
 
     public async verify() {
         try {
-            await this.auth.verify()
+            const result = await this.auth.verify()
+            console.log(result);
             this.notify.info('Verified');
+        } catch(e) {
+            this.notify.error(e)
+        }
+    }
+
+
+    public async prolongate() {
+        try {
+            const result = await this.auth.prolongate()
+            console.log(result);
+            this.notify.info('Prolongated');
         } catch(e) {
             this.notify.error(e)
         }

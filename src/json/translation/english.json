@@ -23,7 +23,8 @@
     "error": "Error",
     "authorization": " Identification",
     "username": "Username",
-    "password": "Password"
+    "password": "Password",
+    "autoLogin": "Keep logged in"
   },
   "button": {
     "login": "Login"
