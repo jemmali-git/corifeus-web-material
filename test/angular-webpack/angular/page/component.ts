@@ -88,11 +88,11 @@ export class Components implements OnDestroy{
     public colors: string[] = ['default', 'primary', 'accent', 'warn'];
 
     constructor( ) {
-        window.corifeus.core.http.counter++;
+//        window.corifeus.core.http.counter++;
     }
 
     ngOnDestroy() {
-        window.corifeus.core.http.counter--;
+//        window.corifeus.core.http.counter--;
 
     }
 }

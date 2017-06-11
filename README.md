@@ -22,7 +22,7 @@ Besides, when I can support, please note, I cannot support old versions, only th
    
 ### Built on Node 
 ``` 
-v8.0.0
+v8.1.0
 ```   
    
 The ```async``` and ```await``` keywords are required.
@@ -31,7 +31,7 @@ Install NodeJs:
 https://nodejs.org/en/download/package-manager/    
   
 ### Updating
-Since, I work full time, I can work only on weekends and Github updates are released only Sundays. Minor errors can be released any time, but reflects will be shown only in NPM.     
+Since, I work full time, I can work only on weekends. Github updates are released only Sundays. Minor errors can be released any time, but reflects will be shown only in NPM.     
   
 # Description  
 
@@ -88,7 +88,7 @@ monochromatic, analogous, complementary, tradic
 [//]: #@corifeus-footer
 
 ---
-[**CORIFEUS-WEB-MATERIAL**](https://pages.corifeus.tk/corifeus-web-material) Build v4.1.419-13
+[**CORIFEUS-WEB-MATERIAL**](https://pages.corifeus.tk/corifeus-web-material) Build v4.1.435-24
 
 [Corifeus](http://www.corifeus.tk) by [Patrik Laszlo](http://patrikx3.tk)
 
