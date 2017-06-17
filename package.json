@@ -33,7 +33,7 @@
         "corifeus-builder-angular": "^4.2.417-18"
     },
     "dependencies": {
-        "@angular/animations": "^4.2.1",
+        "@angular/animations": "^4.2.3",
         "@angular/material": "^2.0.0-beta.6",
         "corifeus-web": "^4.2.394-21",
         "font-awesome": "^4.7.0",
