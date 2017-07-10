@@ -30,7 +30,11 @@ https://nodejs.org/en/download/package-manager/
 
 Corifeus Web Material. 
   
-https://material.corifeus.tk  
+https://material.corifeus.com  
+  
+# Hack
+  
+For now in beta, uses ```@angular/cdk```, required.  
   
 * Component
   * Loading
@@ -79,8 +83,8 @@ monochromatic, analogous, complementary, tradic
 
 ---
 
-[**CORIFEUS-WEB-MATERIAL**](https://pages.corifeus.tk/corifeus-web-material) Build v4.2.470-51
+[**CORIFEUS-WEB-MATERIAL**](https://pages.corifeus.com/corifeus-web-material) Build v4.2.486-59
 
-[Corifeus](http://www.corifeus.tk) by [Patrik Laszlo](http://patrikx3.tk)
+[Corifeus](http://www.corifeus.com) by [Patrik Laszlo](http://patrikx3.com)
 
 [//]: #@corifeus-footer:end
