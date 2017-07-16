@@ -31,7 +31,7 @@ export class Http404 {
 
         history.replaceState({} , State.RequestPath , State.RequestPath);
         State.NotFound = true;
-      //  window.corifeus.core.http.status = 404;
+        window.corifeus.core.http.status = 404;
 
         this.locale.subscribe((data: LocaleSubject) => {
             this.i18n = data.locale.data;
