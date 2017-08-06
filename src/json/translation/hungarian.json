@@ -24,7 +24,8 @@
     "authorization": " Azonosítás",
     "username": "Felhasználó",
     "password": "Jelszó",
-    "autoLogin": "Maradj belépve"
+    "autoLogin": "Maradj belépve",
+    "save": "Mentés"
   },
   "button": {
     "login": "Belépés"

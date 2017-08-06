@@ -24,7 +24,8 @@
     "authorization": " Identification",
     "username": "Username",
     "password": "Password",
-    "autoLogin": "Keep logged in"
+    "autoLogin": "Keep logged in",
+    "save": "Save"
   },
   "button": {
     "login": "Login"
