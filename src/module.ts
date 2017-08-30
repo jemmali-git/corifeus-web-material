@@ -26,7 +26,6 @@ import {
     MdProgressSpinnerModule,
     MdRadioModule,
     MdRippleModule,
-    MdSelectionModule,
     MdSelectModule,
     MdSidenavModule,
     MdSliderModule,
@@ -37,6 +36,7 @@ import {
     MdTabsModule,
     MdToolbarModule,
     MdTooltipModule,
+//    MdSelectionList,
 } from '@angular/material';
 
 import { Boot } from './boot';
@@ -103,7 +103,6 @@ const materialModules = [
     MdProgressSpinnerModule,
     MdRadioModule,
     MdRippleModule,
-    MdSelectionModule,
     MdSelectModule,
     MdSidenavModule,
     MdSliderModule,
@@ -114,6 +113,7 @@ const materialModules = [
     MdTabsModule,
     MdToolbarModule,
     MdTooltipModule,
+//    MdSelectionList,
 ]
 
 @NgModule({
@@ -129,7 +129,6 @@ const materialModules = [
         MdCheckboxModule,
         MdChipsModule,
         MdCommonModule,
-        MdCoreModule,
         MdDatepickerModule,
         MdDialogModule,
         MdExpansionModule,
@@ -146,7 +145,6 @@ const materialModules = [
         MdProgressSpinnerModule,
         MdRadioModule,
         MdRippleModule,
-        MdSelectionModule,
         MdSelectModule,
         MdSidenavModule,
         MdSliderModule,
@@ -157,6 +155,7 @@ const materialModules = [
         MdTabsModule,
         MdToolbarModule,
         MdTooltipModule,
+//        MdSelectionList,
         // material modules
 
     ],
@@ -194,7 +193,6 @@ const materialModules = [
         MdCheckboxModule,
         MdChipsModule,
         MdCommonModule,
-        MdCoreModule,
         MdDatepickerModule,
         MdDialogModule,
         MdExpansionModule,
@@ -211,7 +209,6 @@ const materialModules = [
         MdProgressSpinnerModule,
         MdRadioModule,
         MdRippleModule,
-        MdSelectionModule,
         MdSelectModule,
         MdSidenavModule,
         MdSliderModule,
@@ -222,6 +219,7 @@ const materialModules = [
         MdTabsModule,
         MdToolbarModule,
         MdTooltipModule,
+//        MdSelectionList,
         // material modules
 
         Loading,

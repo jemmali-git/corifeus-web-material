@@ -161,6 +161,7 @@
           icon:            $white, // white,
           icons:           $white, // white,
           text:            $white, // white,
+          slider-min:        white,
           slider-off:        $white, //rgba(white, 0.3),
           slider-off-active: $white, //rgba(white, 0.3),
   );
@@ -180,6 +181,12 @@
           selected-button: rgba(black, 0.90), //map_get($mat-grey, 900),
           selected-disabled-button: rgba(black, 0.80), //map_get($mat-grey, 800),
           disabled-button-toggle: rgba(black, 1.00), //map_get($mat-grey, 1000),
+
+//          unselected-chip: map_get($mat-grey, 700),
+//          disabled-list-option: black,
+
+          unselected-chip: rgba(black, 0.90), // map_get($mat-grey, 300),
+          disabled-list-option: rgba(black, 0.80), // map_get($mat-grey, 200),
   );
 
   $theme_highlight: (
@@ -212,6 +219,13 @@
   // @mixin angular-material-theme($theme) {
 
   @include mat-core-theme($theme);
+
+  // this is new again
+//  @include mat-ripple-theme($theme_reverse);
+//  @include mat-option-theme($theme_reverse);
+//  @include mat-optgroup-theme($theme_reverse);
+//  @include mat-pseudo-checkbox-theme($theme_reverse);
+
 
   @include mat-autocomplete-theme($theme_reverse);
 

@@ -223,7 +223,8 @@
 
 
     background-color: map_get($mat-grey, 900);
-    background: radial-gradient(circle, mat-color($mat-grey, 1000), mat-color($mat-grey, 900));
+//    background: radial-gradient(circle, mat-color($mat-grey, 1000), mat-color($mat-grey, 900));
+    background: radial-gradient(circle, #9e9e9e, rgba(#9e9e9e, 0.9));
 
     $link: mat-palette($accent, A400);
     $link-hover: mat-palette($accent, A200);
