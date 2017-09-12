@@ -32,6 +32,9 @@ https://nodejs.org/en/download/package-manager/
 Corifeus Web Material. 
   
 https://material.corifeus.com  
+
+# Error
+There is in ```uglifyjs``` or ```cssminify``` is making it not working with this repo, right now it is using the ```---cory-verbose``` build (which removes the compression - uglifys and cssminfier).
   
 # Hack
   
@@ -84,7 +87,7 @@ monochromatic, analogous, complementary, tradic
 
 ---
 
-[**CORIFEUS-WEB-MATERIAL**](https://pages.corifeus.com/corifeus-web-material) Build v4.3.111-142
+[**CORIFEUS-WEB-MATERIAL**](https://pages.corifeus.com/corifeus-web-material) Build v4.4.7-150
 
 [Corifeus](http://www.corifeus.com) by [Patrik Laszlo](http://patrikx3.com)
 

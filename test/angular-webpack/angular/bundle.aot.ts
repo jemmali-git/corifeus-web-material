@@ -1,8 +1,8 @@
-import { platformBrowser }    from '@angular/platform-browser';
-
 // must be the first, or 2nd
 import { enableProdMode } from '@angular/core';
 enableProdMode();
+
+import { platformBrowser }    from '@angular/platform-browser';
 
 import './boot.common'
 
