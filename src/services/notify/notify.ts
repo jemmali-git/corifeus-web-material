@@ -55,11 +55,10 @@ export class NotifyService  {
                 icon: 'info'
             }
         }
+        config.data = config.data || {};
+        config.data.message = message;
+        config.data.options = coryOptions;
         const snackBar = this.snackBar.openFromComponent(NotifyComponent, config);
-        snackBar.instance.message = message;
-        snackBar.instance.options = coryOptions;
-        snackBar.instance.ctx = snackBar;
-
     }
 
     error(error: Error|Response) {

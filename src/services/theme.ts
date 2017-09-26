@@ -63,8 +63,11 @@ export class ThemeService {
             const body = document.getElementsByTagName("body")[0];
 
             body.classList.remove(this.current);
+//            this.overlayContainer.getContainerElement().classList.remove(this.current);
+
             this.current = newTheme;
             body.classList.add(this.current);
+//            this.overlayContainer.getContainerElement().classList.add(this.current);
 
             //this.overlayContainer.themeClass = newTheme;
             this.cookies.set(this.settings.cookie.theme, this.current);

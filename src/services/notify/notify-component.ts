@@ -5,13 +5,15 @@ import {
     ViewChild,
     ElementRef,
     HostListener,
+    Inject
 } from '@angular/core';
 
 import { ThemeService } from '../theme'
 import { ColorService } from 'corifeus-web'
 
 import { NotifyOptions } from './notify'
-import {MdSnackBarRef } from '@angular/material';
+
+import {MD_SNACK_BAR_DATA, MdSnackBarRef } from '@angular/material';
 
 import { LocaleService, LocaleSubject } from 'corifeus-web';
 
@@ -19,8 +21,8 @@ import { LocaleService, LocaleSubject } from 'corifeus-web';
 
     template: `
         <div style="position: absolute;">
-            <md-icon color="accent" #elementIcon>{{ options.icon }}</md-icon>
-            <span class="message" [innerHTML]="message | coryHtml"></span>
+            <md-icon color="accent" #elementIcon>{{ data.options.icon }}</md-icon>
+            <span class="message" [innerHTML]="data.message | coryHtml"></span>
         </div>
         <a md-button color="accent" #elementButton class="cory-mat-notify-button" (click)="ctx.dismiss()">{{ this.i18n.title.ok }}</a>
 
@@ -48,31 +50,36 @@ export class NotifyComponent implements AfterViewInit {
 
     inited: boolean = false;
 
-    message: string;
-    options: NotifyOptions;
+    public data: { message: string, options: any };
+
     i18n: any;
-    ctx: MdSnackBarRef<NotifyComponent>;
 
     constructor(
+        public ctx: MdSnackBarRef<NotifyComponent>,
         private locale: LocaleService,
         private theme: ThemeService,
         private color: ColorService,
+        @Inject(MD_SNACK_BAR_DATA) data: any,
     ) {
         this.locale.subscribe((subject : LocaleSubject) => {
             this.i18n = subject.locale.data.material;
         });
+        this.data = data;
     }
 
     ngAfterViewInit() {
-        //fixme cache the colros
-        const backgroundColor = window.getComputedStyle(document.getElementsByTagName('snack-bar-container')[0]).backgroundColor;
-        let buttonColor = window.getComputedStyle(this.elementButton.nativeElement).color;
-        let iconColor = window.getComputedStyle(this.elementIcon.nativeElement).color;
-        buttonColor = this.color.getReadableColor(buttonColor, backgroundColor)
-        iconColor = this.color.getReadableColor(iconColor, backgroundColor);
-
-        this.elementIcon.nativeElement.style.color = iconColor;
-        this.elementButton.nativeElement.style.color = buttonColor;
+        this.ctx.afterOpened().subscribe(() => {
+            const snackElement = document.getElementsByTagName('snack-bar-container')[0];
+            snackElement.classList.add(this.theme.current);
+            //fixme cache the colors
+            const backgroundColor = window.getComputedStyle(snackElement).backgroundColor;
+            let buttonColor = window.getComputedStyle(this.elementButton.nativeElement).color;
+            let iconColor = window.getComputedStyle(this.elementIcon.nativeElement).color;
+            buttonColor = this.color.getReadableColor(buttonColor, backgroundColor)
+            iconColor = this.color.getReadableColor(iconColor, backgroundColor);
+            this.elementIcon.nativeElement.style.color = iconColor;
+            this.elementButton.nativeElement.style.color = buttonColor;
+        })
     }
 
     @HostListener('window:keydown', ['$event'])

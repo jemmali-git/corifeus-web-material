@@ -31,7 +31,7 @@ export class ThemeButton {
     mdTooltipPosition: string = "left";
 
     @Input('color')
-    color: string = 'default';;
+    color: string = 'default';
 
 
     i18n: any;

@@ -35,6 +35,7 @@ import {
     MdTabsModule,
     MdToolbarModule,
     MdTooltipModule,
+    OverlayContainer,
 //    MdSelectionList,
 } from '@angular/material';
 
@@ -75,7 +76,7 @@ import { TranslationMenu } from './component/cory-mat-translation/cory-mat-trans
 
 /***
  * NEVER USE A EXPORT * AS, NEED THE EXACT COMPONENT FOR INJECTABLE FUNCTION!!!!
- */
+
 
 const materialModules = [
     MdAutocompleteModule,
@@ -111,9 +112,11 @@ const materialModules = [
     MdTabsModule,
     MdToolbarModule,
     MdTooltipModule,
+    OverlayContainer,
+
 //    MdSelectionList,
 ]
-
+ */
 @NgModule({
     imports: [
         CorifeusModule,
@@ -153,12 +156,14 @@ const materialModules = [
         MdTabsModule,
         MdToolbarModule,
         MdTooltipModule,
+//        OverlayContainer,
 //        MdSelectionList,
         // material modules
 
     ],
     declarations: [
         NotifyComponent,
+//        OverlayContainer,
         Loading,
 
         ThemeMenu,
@@ -177,7 +182,6 @@ const materialModules = [
         Boot,
         ThemeService,
         NotifyService,
-
     ],
     exports: [
         CorifeusModule,
@@ -217,6 +221,7 @@ const materialModules = [
         MdTabsModule,
         MdToolbarModule,
         MdTooltipModule,
+//        OverlayContainer,
 //        MdSelectionList,
         // material modules
 
@@ -234,12 +239,15 @@ const materialModules = [
 
     ],
     entryComponents: [
-        NotifyComponent
+        NotifyComponent,
+//        OverlayContainer,
     ]
 })
 export class CorifeusMaterialModule {
 
-    constructor(boot : Boot) {}
+    constructor(boot : Boot) {
+
+    }
 
     public static forRoot(): ModuleWithProviders {
         return {
