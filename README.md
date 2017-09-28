@@ -16,7 +16,7 @@ This is an open source project. Just code.
    
 ### Built on Node 
 ``` 
-v8.5.0
+v8.6.0
 ```   
    
 The ```async``` and ```await``` keywords are required.
@@ -87,7 +87,7 @@ monochromatic, analogous, complementary, tradic
 
 ---
 
-[**CORIFEUS-WEB-MATERIAL**](https://pages.corifeus.com/corifeus-web-material) Build v4.4.60-172
+[**CORIFEUS-WEB-MATERIAL**](https://pages.corifeus.com/corifeus-web-material) Build v4.4.62-173
 
 [Corifeus](http://www.corifeus.com) by [Patrik Laszlo](http://patrikx3.com)
 
