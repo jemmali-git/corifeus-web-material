@@ -18,14 +18,14 @@ import {
 
 const template = require('lodash/template');
 
-// requires to be in a md-menu
+// requires to be in a mat-menu
 @Component({
     selector: 'cory-mat-theme-menu',
     template: `
-    <button md-menu-item disabled>
+    <button mat-menu-item disabled>
         {{ i18n.title.theme }}
     </button>
-    <button md-menu-item
+    <button mat-menu-item
             *ngFor="let thisTheme of settings.themes.material"
             (click)="this.clickChangeTheme(thisTheme)"
             [class.cory-mat-menu-item-active]="thisTheme == theme.current"

@@ -13,15 +13,15 @@ import {
 } from '../../services/notify/notify';
 
 
-// requires to be in a md-menu
+// requires to be in a mat-menu
 @Component({
     selector: 'cory-mat-translation-menu',
     template: `
-     <button md-menu-item disabled>
+     <button mat-menu-item disabled>
                 {{ i18n.material.title.language }}
             </button>
             <button
-                    md-menu-item *ngFor="let translation of settings.translations.language | coryKeys"
+                    mat-menu-item *ngFor="let translation of settings.translations.language | coryKeys"
                     (click)="clickChangeTranslate(translation)"
                     [class.cory-mat-menu-item-active]="translation == locale.current"
             >

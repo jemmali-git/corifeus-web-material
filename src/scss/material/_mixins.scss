@@ -1,5 +1,5 @@
 @mixin cory-mat-theme-link($color, $hover) {
-  md-card {
+  mat-card {
     a {
       color: $color;
       text-decoration: none;
@@ -115,35 +115,35 @@
   @if ($type == 'light') {
     /*
     // disabled
-    [md-raised-button].mat-default:hover {
+    [mat-raised-button].mat-default:hover {
       background-color: rgba(black, 0.05);
       color: black;
     }
     */
-    [md-raised-button].mat-primary:not([disabled]):hover {
+    [mat-raised-button].mat-primary:not([disabled]):hover {
       background-color: mat-color($primary, 800);
     }
-    [md-raised-button].mat-accent:not([disabled]):hover {
+    [mat-raised-button].mat-accent:not([disabled]):hover {
       background-color: mat-color($accent, 800);
     }
-    [md-raised-button].mat-warn:not([disabled]):hover {
+    [mat-raised-button].mat-warn:not([disabled]):hover {
       background-color: mat-color($warn, 800);
     }
   } @else {
     /*
     // disabled
-    [md-raised-button]:hover {
+    [mat-raised-button]:hover {
       background-color: mat-color($primary);
       color: black;
     }
     */
-    [md-raised-button].mat-primary:not([disabled]):hover {
+    [mat-raised-button].mat-primary:not([disabled]):hover {
       background-color: mat-color($primary, 400);
     }
-    [md-raised-button].mat-accent:not([disabled]):hover {
+    [mat-raised-button].mat-accent:not([disabled]):hover {
       background-color: mat-color($accent, 400);
     }
-    [md-raised-button].mat-warn:not([disabled]):hover {
+    [mat-raised-button].mat-warn:not([disabled]):hover {
       background-color: mat-color($warn, 400);
     }
 
@@ -212,6 +212,12 @@
     $link-hover: mat-palette($accent, A700);
     @include cory-mat-theme-link(mat-color($link), mat-color($link-hover));
 
+    //fixme this is something weird, to snackbar need black, but still it is not black :)
+    .cory-mat-bg {
+      background-color: map_get($mat-grey, 900);
+      //    background: radial-gradient(circle, mat-color($mat-grey, 1000), mat-color($mat-grey, 900));
+      background: radial-gradient(circle, #000000, #212121);
+    }
 
   } @else {
     $warn: mat-palette($mat-red);

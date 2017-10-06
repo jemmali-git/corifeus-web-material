@@ -27,7 +27,7 @@ import {
 } from '../../services/theme';
 
 
-// requires to be in a md-menu
+// requires to be in a mat-menu
 @Component({
     selector: 'cory-mat-login',
     templateUrl: './cory-mat-login.html'

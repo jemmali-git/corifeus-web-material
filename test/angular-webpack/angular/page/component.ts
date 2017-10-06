@@ -11,37 +11,37 @@ import {
 
         <fieldset>
             <legend>Icon</legend>
-            <md-icon>keyboard</md-icon>
-            <md-icon>vpn_key</md-icon>
-            <md-icon>face</md-icon>
+            <mat-icon>keyboard</mat-icon>
+            <mat-icon>vpn_key</mat-icon>
+            <mat-icon>face</mat-icon>
         </fieldset>
         <br/>
         
         <fieldset>
             <legend>Button</legend>
             <span *ngFor="let color of colors">
-                <button md-button [color]="color">{{ color }}</button>&nbsp;   
+                <button mat-button [color]="color">{{ color }}</button>&nbsp;   
             </span>
         </fieldset>
         <br/>
         <fieldset>
             <legend>Button raised</legend>
             <span *ngFor="let color of colors">
-                <button md-raised-button [color]="color">{{ color }}</button> &nbsp;  
+                <button mat-raised-button [color]="color">{{ color }}</button> &nbsp;  
             </span>
         </fieldset>
         <br/>
         <fieldset>
             <legend>Mat Link </legend>
             <span *ngFor="let color of colors">
-                <a href="javascript:void(0);" md-button [color]="color">{{ color }}</a> &nbsp;
+                <a href="javascript:void(0);" mat-button [color]="color">{{ color }}</a> &nbsp;
             </span>
         </fieldset>
         <br/>
         <fieldset>
             <legend>Mat Link raised</legend>
             <span *ngFor="let color of colors">
-                <a href="javascript:void(0);" md-raised-button [color]="color">{{ color }}</a> &nbsp;
+                <a href="javascript:void(0);" mat-raised-button [color]="color">{{ color }}</a> &nbsp;
             </span>
         </fieldset>
 
@@ -49,9 +49,9 @@ import {
         <fieldset>
             <legend>Slide toggle</legend>
             <span *ngFor="let color of colors">
-                 <md-slide-toggle [color]="color">
+                 <mat-slide-toggle [color]="color">
                     {{ color }}
-                </md-slide-toggle>
+                </mat-slide-toggle>
             </span>
         </fieldset>
 
@@ -68,14 +68,14 @@ import {
             <legend>Input</legend>
             <form class="cory-mat-form-full-width">
                 <div *ngFor="let color of colors">
-                    <md-input-container [color]="color" >
-                        <input mdInput [placeholder]="'input ' + color" [value]="" type="date">
-                    </md-input-container>
+                    <mat-input-container [color]="color" >
+                        <input matInput [placeholder]="'input ' + color" [value]="" type="date">
+                    </mat-input-container>
                 </div>
 
-                    <md-input-container >
-                        <input mdInput type="month" class="webkit-autofill" placeholder="input:-webkit-autofill">
-                    </md-input-container>
+                    <mat-input-container >
+                        <input matInput type="month" class="webkit-autofill" placeholder="input:-webkit-autofill">
+                    </mat-input-container>
 
             </form>
         </fieldset>

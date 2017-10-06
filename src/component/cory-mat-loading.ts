@@ -8,11 +8,11 @@ import { Http } from '@angular/http';
 @Component({
         selector: 'cory-mat-loading',
         template: `
-<md-progress-bar
+<mat-progress-bar
 style="position: fixed; top: 0px; left: 0px; width: 100%; z-index: 100000;"
 *ngIf="visible || requestCount > 0"
 color="primary"
-mode="indeterminate"></md-progress-bar>
+mode="indeterminate"></mat-progress-bar>
 `,
     })
 export class Loading {

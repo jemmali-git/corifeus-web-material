@@ -19,11 +19,11 @@ import { NotifyService } from '../../../../src';
                     <br/>
 
                                        
-                    <button md-raised-button color="primary" (click)="verify()">
+                    <button mat-raised-button color="primary" (click)="verify()">
                         Verify
                     </button>
                     
-                    <button md-raised-button color="primary" (click)="prolongate()">
+                    <button mat-raised-button color="primary" (click)="prolongate()">
                         Prolongate
                     </button>
                 </div>

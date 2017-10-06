@@ -8,17 +8,17 @@ import {
     MediaQueryService, MediaQuerySettingType, MediaQuerySetting
 } from "corifeus-web";
 
-// requires to be in a md-menu
+// requires to be in a mat-menu
 @Component({
     selector: 'cory-mat-theme-button',
     template: `
 
-        <md-menu x-position="before" #menuTheme="mdMenu">
+        <mat-menu x-position="before" #menuTheme="matMenu">
             <cory-mat-theme-menu></cory-mat-theme-menu>
-        </md-menu>
+        </mat-menu>
 
-        <button [color]="color" #buttonTheme md-button [mdMenuTriggerFor]="menuTheme" [mdTooltip]="tooltip" [mdTooltipPosition]="mdTooltipPosition">
-            <md-icon>color_lens</md-icon>
+        <button [color]="color" #buttonTheme mat-button [matMenuTriggerFor]="menuTheme" [matTooltip]="tooltip" [matTooltipPosition]="matTooltipPosition">
+            <mat-icon>color_lens</mat-icon>
             <span class="cory-mat-hide-xsmall">
             {{ i18n.material.title.theme }}
             </span>
@@ -28,7 +28,7 @@ import {
 export class ThemeButton {
 
     @Input('cory-tooltip-position')
-    mdTooltipPosition: string = "left";
+    matTooltipPosition: string = "left";
 
     @Input('color')
     color: string = 'default';

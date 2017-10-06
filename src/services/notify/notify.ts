@@ -10,7 +10,7 @@ import {
     isDevMode
 } from '@angular/core';
 
-import {MdSnackBar, MdSnackBarConfig} from '@angular/material';
+import {MatSnackBar, MatSnackBarConfig} from '@angular/material';
 
 import { LocaleService, LocaleSubject } from 'corifeus-web';
 
@@ -30,7 +30,7 @@ export class NotifyService  {
     i18n : any;
 
     constructor(
-        private snackBar: MdSnackBar,
+        private snackBar: MatSnackBar,
         private locale: LocaleService,
     ) {
 
@@ -39,9 +39,9 @@ export class NotifyService  {
         });
     }
 
-    info(message: string, coryOptions?: NotifyOptions|string, config? : MdSnackBarConfig) {
+    info(message: string, coryOptions?: NotifyOptions|string, config? : MatSnackBarConfig) {
         if (config === undefined) {
-            config = <MdSnackBarConfig>{
+            config = <MatSnackBarConfig>{
                 duration: duration
             }
         }

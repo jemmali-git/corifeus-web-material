@@ -1,7 +1,7 @@
 @import "../mixins";
 
 .cory-mat-theme-dark-matrix {
-  $md-matrix: (
+  $mat-matrix: (
           50 : #e0ffe0,
           100 : #b3ffb3,
           200 : #80ff80,
@@ -35,7 +35,7 @@
   );
 
 
-  $md-matrikxlow: (
+  $mat-matrikxlow: (
           50 : #e7f9e7,
           100 : #c2f0c2,
           200 : #99e699,
@@ -71,7 +71,7 @@
 
 
 
-  $md-matrixwarm: (
+  $mat-matrixwarm: (
           50 : #f9e0e0,
           100 : #f0b3b3,
           200 : #e68080,
@@ -106,7 +106,7 @@
 
 
 
-  $md-matrixaccent: (
+  $mat-matrixaccent: (
           50 : #f9e7f9,
           100 : #f0c2f0,
           200 : #e699e6,
@@ -142,12 +142,12 @@
 
 
 
-  $primary:  mat-palette($md-matrix);
-  $accent: mat-palette($md-matrikxlow);
-  $warn : mat-palette($md-matrixaccent);
+  $primary:  mat-palette($mat-matrix);
+  $accent: mat-palette($mat-matrikxlow);
+  $warn : mat-palette($mat-matrixaccent);
 
-  $white: map_get($md-matrix, 500);
-  $white2: map_get($md-matrixaccent, 500);
+  $white: map_get($mat-matrix, 500);
+  $white2: map_get($mat-matrixaccent, 500);
 
   $foreground: (
           base:            $white, //white,
@@ -172,12 +172,12 @@
           status-bar: black,
           app-bar:    rgba(black, 0.90), //map_get($mat-grey, 900),
           background: rgba(black, 0.80), //#303030,
-          hover:      rgba(map_get($md-matrix, A700), 0.4), //rgba(white, 0.04),
+          hover:      rgba(map_get($mat-matrix, A700), 0.4), //rgba(white, 0.04),
           card:       rgba(black, 0.80), //map_get($mat-grey, 800),
           dialog:     rgba(black, 0.80), //map_get($mat-grey, 800),
-          disabled-button: rgba(map_get($md-matrix, A700), 0.12), // $white-12-opacity,
+          disabled-button: rgba(map_get($mat-matrix, A700), 0.12), // $white-12-opacity,
           raised-button: rgba(black, 0.80), //map-get($mat-grey, 800),
-          focused-button: rgba(map_get($md-matrix, A700), 0.06), //$white-6-opacity,
+          focused-button: rgba(map_get($mat-matrix, A700), 0.06), //$white-6-opacity,
           selected-button: rgba(black, 0.90), //map_get($mat-grey, 900),
           selected-disabled-button: rgba(black, 0.80), //map_get($mat-grey, 800),
           disabled-button-toggle: rgba(black, 1.00), //map_get($mat-grey, 1000),
@@ -278,7 +278,7 @@
   @include cory-mat-theme-toolbar('dark', $theme);
 
   @include cory-mat-theme-button('dark', $theme_reverse);
-  @include cory-mat-theme-link(map_get($md-matrixaccent, 500), map_get($md-matrixaccent, A400));
+  @include cory-mat-theme-link(map_get($mat-matrixaccent, 500), map_get($mat-matrixaccent, A400));
 
   @include cory-mat-autofill();
 

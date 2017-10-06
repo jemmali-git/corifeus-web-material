@@ -1,57 +1,57 @@
 <form #loginForm="ngForm" (ngSubmit)="onSubmit()" novalidate #elementForm>
 
-    <md-toolbar color="primary">
-        <md-icon>fingerprint</md-icon>
+    <mat-toolbar color="primary">
+        <mat-icon>fingerprint</mat-icon>
         {{ i18n.title.authorization }}
         <span class="cory-mat-fill-horizontal"></span>
-    </md-toolbar>
+    </mat-toolbar>
 
-    <md-card>
+    <mat-card>
 
-        <md-card-content class="cory-mat-form-full-width">
+        <mat-card-content class="cory-mat-form-full-width">
 
-            <md-input-container>
-                <input cory-focus required  mdInput [placeholder]="i18n.title.username" value="" ngModel name="username"  #modelUsername="ngModel" #inputUsername>
-                <span mdPrefix>
-                            <md-icon>face</md-icon>&nbsp;
+            <mat-input-container>
+                <input cory-focus required  matInput [placeholder]="i18n.title.username" value="" ngModel name="username"  #modelUsername="ngModel" #inputUsername>
+                <span matPrefix>
+                            <mat-icon>face</mat-icon>&nbsp;
                         </span>
-                <md-error>
+                <mat-error>
                     {{ i18n.invalid.required }}
-                </md-error>
-            </md-input-container>
+                </mat-error>
+            </mat-input-container>
 
             <br/>
             <br/>
 
-            <md-input-container>
-                <input required mdInput [placeholder]="i18n.title.password" type="password" value="" ngModel name="password"  #modelPassword="ngModel">
-                <span mdPrefix>
-                            <md-icon>vpn_key</md-icon>&nbsp;
+            <mat-input-container>
+                <input required matInput [placeholder]="i18n.title.password" type="password" value="" ngModel name="password"  #modelPassword="ngModel">
+                <span matPrefix>
+                            <mat-icon>vpn_key</mat-icon>&nbsp;
                         </span>
-                <md-error>
+                <mat-error>
                     {{ i18n.invalid.required }}
-                </md-error>
-            </md-input-container>
+                </mat-error>
+            </mat-input-container>
 
-        </md-card-content>
+        </mat-card-content>
 
-        <md-checkbox
+        <mat-checkbox
                 [checked]="auto"
                 align="start"
                 value="" ngModel name="auto"  #modelAuto="ngModel" #inputAuto
                 >
             {{ i18n.title.autoLogin }}
-        </md-checkbox>
+        </mat-checkbox>
 
-        <md-card-actions align="end">
+        <mat-card-actions align="end">
 
-            <button md-raised-button color="primary" type="submit" [disabled]="!loginForm.form.valid">
-                <md-icon>keyboard_arrow_right</md-icon>
+            <button mat-raised-button color="primary" type="submit" [disabled]="!loginForm.form.valid">
+                <mat-icon>keyboard_arrow_right</mat-icon>
                 {{ i18n.button.login}}
             </button>
 
-        </md-card-actions>
+        </mat-card-actions>
 
-    </md-card>
+    </mat-card>
 
 </form>

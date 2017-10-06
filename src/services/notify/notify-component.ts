@@ -13,7 +13,7 @@ import { ColorService } from 'corifeus-web'
 
 import { NotifyOptions } from './notify'
 
-import {MD_SNACK_BAR_DATA, MdSnackBarRef } from '@angular/material';
+import {MAT_SNACK_BAR_DATA, MatSnackBarRef } from '@angular/material';
 
 import { LocaleService, LocaleSubject } from 'corifeus-web';
 
@@ -21,10 +21,10 @@ import { LocaleService, LocaleSubject } from 'corifeus-web';
 
     template: `
         <div style="position: absolute;">
-            <md-icon color="accent" #elementIcon>{{ data.options.icon }}</md-icon>
+            <mat-icon color="accent" #elementIcon>{{ data.options.icon }}</mat-icon>
             <span class="message" [innerHTML]="data.message | coryHtml"></span>
         </div>
-        <a md-button color="accent" #elementButton class="cory-mat-notify-button" (click)="ctx.dismiss()">{{ this.i18n.title.ok }}</a>
+        <a mat-button color="accent" #elementButton class="cory-mat-notify-button" (click)="ctx.dismiss()">{{ this.i18n.title.ok }}</a>
 
     `,
 
@@ -34,7 +34,7 @@ import { LocaleService, LocaleSubject } from 'corifeus-web';
             top: -7px;
         }
 
-        [md-button]{
+        [mat-button]{
             position: absolute;
             top: 8px;
             right: 4px;
@@ -55,11 +55,11 @@ export class NotifyComponent implements AfterViewInit {
     i18n: any;
 
     constructor(
-        public ctx: MdSnackBarRef<NotifyComponent>,
+        public ctx: MatSnackBarRef<NotifyComponent>,
         private locale: LocaleService,
         private theme: ThemeService,
         private color: ColorService,
-        @Inject(MD_SNACK_BAR_DATA) data: any,
+        @Inject(MAT_SNACK_BAR_DATA) data: any,
     ) {
         this.locale.subscribe((subject : LocaleSubject) => {
             this.i18n = subject.locale.data.material;
@@ -69,10 +69,11 @@ export class NotifyComponent implements AfterViewInit {
 
     ngAfterViewInit() {
         this.ctx.afterOpened().subscribe(() => {
-            const snackElement = document.getElementsByTagName('snack-bar-container')[0];
+            const snackElement = <HTMLElement>document.getElementsByTagName('snack-bar-container')[0];
             snackElement.classList.add(this.theme.current);
+            snackElement.classList.add('cory-mat-bg');
             //fixme cache the colors
-            const backgroundColor = window.getComputedStyle(snackElement).backgroundColor;
+            const backgroundColor = window.getComputedStyle(snackElement).getPropertyValue('background-color');
             let buttonColor = window.getComputedStyle(this.elementButton.nativeElement).color;
             let iconColor = window.getComputedStyle(this.elementIcon.nativeElement).color;
             buttonColor = this.color.getReadableColor(buttonColor, backgroundColor)
