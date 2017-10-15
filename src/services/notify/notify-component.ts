@@ -22,7 +22,7 @@ import { LocaleService, LocaleSubject } from 'corifeus-web';
     template: `
         <div style="position: absolute;">
             <mat-icon color="accent" #elementIcon>{{ data.options.icon }}</mat-icon>
-            <span class="message" [innerHTML]="data.message | coryHtml"></span>
+            <span #elementMessage class="message" [innerHTML]="data.message | coryHtml"></span>
         </div>
         <a mat-button color="accent" #elementButton class="cory-mat-notify-button" (click)="ctx.dismiss()">{{ this.i18n.title.ok }}</a>
 
@@ -47,6 +47,7 @@ export class NotifyComponent implements AfterViewInit {
 
     @ViewChild('elementButton', {read: ElementRef}) elementButton : ElementRef;
     @ViewChild('elementIcon', {read: ElementRef}) elementIcon : ElementRef;
+    @ViewChild('elementMessage', {read: ElementRef}) elementMessage : ElementRef;
 
     inited: boolean = false;
 
@@ -70,16 +71,17 @@ export class NotifyComponent implements AfterViewInit {
     ngAfterViewInit() {
         this.ctx.afterOpened().subscribe(() => {
             const snackElement = <HTMLElement>document.getElementsByTagName('snack-bar-container')[0];
-            snackElement.classList.add(this.theme.current);
-            snackElement.classList.add('cory-mat-bg');
             //fixme cache the colors
             const backgroundColor = window.getComputedStyle(snackElement).getPropertyValue('background-color');
+            let color = window.getComputedStyle(snackElement).getPropertyValue('color');
             let buttonColor = window.getComputedStyle(this.elementButton.nativeElement).color;
             let iconColor = window.getComputedStyle(this.elementIcon.nativeElement).color;
             buttonColor = this.color.getReadableColor(buttonColor, backgroundColor)
             iconColor = this.color.getReadableColor(iconColor, backgroundColor);
+            color = this.color.getReadableColor(color, backgroundColor);
             this.elementIcon.nativeElement.style.color = iconColor;
             this.elementButton.nativeElement.style.color = buttonColor;
+            this.elementMessage.nativeElement.style.color = color;
         })
     }
 

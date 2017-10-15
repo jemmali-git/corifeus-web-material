@@ -10,7 +10,7 @@
 
         <mat-card-content class="cory-mat-form-full-width">
 
-            <mat-input-container>
+            <mat-form-field>
                 <input cory-focus required  matInput [placeholder]="i18n.title.username" value="" ngModel name="username"  #modelUsername="ngModel" #inputUsername>
                 <span matPrefix>
                             <mat-icon>face</mat-icon>&nbsp;
@@ -18,12 +18,12 @@
                 <mat-error>
                     {{ i18n.invalid.required }}
                 </mat-error>
-            </mat-input-container>
+            </mat-form-field>
 
             <br/>
             <br/>
 
-            <mat-input-container>
+            <mat-form-field>
                 <input required matInput [placeholder]="i18n.title.password" type="password" value="" ngModel name="password"  #modelPassword="ngModel">
                 <span matPrefix>
                             <mat-icon>vpn_key</mat-icon>&nbsp;
@@ -31,7 +31,7 @@
                 <mat-error>
                     {{ i18n.invalid.required }}
                 </mat-error>
-            </mat-input-container>
+            </mat-form-field>
 
         </mat-card-content>
 

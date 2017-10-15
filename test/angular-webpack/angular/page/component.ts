@@ -68,14 +68,14 @@ import {
             <legend>Input</legend>
             <form class="cory-mat-form-full-width">
                 <div *ngFor="let color of colors">
-                    <mat-input-container [color]="color" >
+                    <mat-form-field [color]="color" >
                         <input matInput [placeholder]="'input ' + color" [value]="" type="date">
-                    </mat-input-container>
+                    </mat-form-field>
                 </div>
 
-                    <mat-input-container >
+                    <mat-form-field >
                         <input matInput type="month" class="webkit-autofill" placeholder="input:-webkit-autofill">
-                    </mat-input-container>
+                    </mat-form-field>
 
             </form>
         </fieldset>
