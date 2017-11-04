@@ -48,7 +48,6 @@ import {
     ],
     bootstrap: [ Application ]
 })
-@Injectable()
 export class Module {
 
     constructor(
