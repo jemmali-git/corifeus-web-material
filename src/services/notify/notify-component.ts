@@ -5,13 +5,12 @@ import {
     ViewChild,
     ElementRef,
     HostListener,
-    Inject
+    Inject,
+    isDevMode
 } from '@angular/core';
 
 import { ThemeService } from '../theme'
 import { ColorService } from 'corifeus-web'
-
-import { NotifyOptions } from './notify'
 
 import {MAT_SNACK_BAR_DATA, MatSnackBarRef } from '@angular/material';
 
@@ -68,25 +67,48 @@ export class NotifyComponent implements AfterViewInit {
         this.data = data;
     }
 
+
+
+    calculateWidth() {
+        const snackElement = <HTMLElement>document.getElementsByTagName('snack-bar-container')[0];
+        //fixme cache the colors
+        const backgroundColor = window.getComputedStyle(snackElement).getPropertyValue('background-color');
+        let color = window.getComputedStyle(snackElement).getPropertyValue('color');
+        let buttonColor = window.getComputedStyle(this.elementButton.nativeElement).color;
+        let iconColor = window.getComputedStyle(this.elementIcon.nativeElement).color;
+        buttonColor = this.color.getReadableColor(buttonColor, backgroundColor)
+        iconColor = this.color.getReadableColor(iconColor, backgroundColor);
+        color = this.color.getReadableColor(color, backgroundColor);
+        this.elementIcon.nativeElement.style.color = iconColor;
+        this.elementButton.nativeElement.style.color = buttonColor;
+        this.elementMessage.nativeElement.style.color = color;
+        const currentMessageWidth = parseFloat(this.elementMessage.nativeElement.offsetWidth);
+        const currentWidth = parseFloat(window.getComputedStyle(snackElement.parentElement).width);
+        let calculatedWidth = currentWidth + currentMessageWidth - 140;
+        if (calculatedWidth > window.innerWidth) {
+            calculatedWidth = calculatedWidth - 70;
+        }
+        const calculatedWidthPixel = calculatedWidth + 'px'
+        snackElement.parentElement.style.width = calculatedWidthPixel;
+        snackElement.style.width = calculatedWidthPixel;
+    }
+
     ngAfterViewInit() {
         this.ctx.afterOpened().subscribe(() => {
-            const snackElement = <HTMLElement>document.getElementsByTagName('snack-bar-container')[0];
-            //fixme cache the colors
-            const backgroundColor = window.getComputedStyle(snackElement).getPropertyValue('background-color');
-            let color = window.getComputedStyle(snackElement).getPropertyValue('color');
-            let buttonColor = window.getComputedStyle(this.elementButton.nativeElement).color;
-            let iconColor = window.getComputedStyle(this.elementIcon.nativeElement).color;
-            buttonColor = this.color.getReadableColor(buttonColor, backgroundColor)
-            iconColor = this.color.getReadableColor(iconColor, backgroundColor);
-            color = this.color.getReadableColor(color, backgroundColor);
-            this.elementIcon.nativeElement.style.color = iconColor;
-            this.elementButton.nativeElement.style.color = buttonColor;
-            this.elementMessage.nativeElement.style.color = color;
+           this.calculateWidth();
         })
     }
 
     @HostListener('window:keydown', ['$event'])
     onKeyDown(event: Event) {
-        this.ctx.dismiss();
+        if (!isDevMode()) {
+            this.ctx.dismiss();
+        }
+    }
+
+    @HostListener('window:resize', ['$event'])
+    onResize(event: any) {
+        this.calculateWidth();
+        console.log(window.innerWidth);
     }
 }

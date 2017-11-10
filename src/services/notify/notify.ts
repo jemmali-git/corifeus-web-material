@@ -17,7 +17,7 @@ import { LocaleService, LocaleSubject } from 'corifeus-web';
 
 import { NotifyComponent } from './notify-component'
 
-const duration = isDevMode() ? 50000 : 3000;
+const duration = isDevMode() ? 100000 : 3000;
 
 export interface NotifyOptions {
     icon: string,
@@ -58,7 +58,7 @@ export class NotifyService  {
         config.data = config.data || {};
         config.data.message = message;
         config.data.options = coryOptions;
-        const snackBar = this.snackBar.openFromComponent(NotifyComponent, config);
+        this.snackBar.openFromComponent(NotifyComponent, config);
     }
 
     error(error: Error|Response) {

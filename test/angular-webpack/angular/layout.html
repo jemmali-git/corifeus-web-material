@@ -23,7 +23,8 @@
 
     </mat-sidenav>
 
-    <div style=" z-index: 10; position: absolute; top: 2px; right: 2px;">
+    <!-- top: 30px; -->
+    <div style="z-index: 10; position: absolute;  right: 2px;" [style.top]="type=='raw' ? '2px' : '32px'">
         <span *ngIf="type=='raw'">
             <cory-mat-theme-button></cory-mat-theme-button>
             <cory-mat-translation-button></cory-mat-translation-button>
