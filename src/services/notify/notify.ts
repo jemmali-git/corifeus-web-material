@@ -3,10 +3,6 @@ import {
 } from '@angular/core';
 
 import {
-    Response
-} from '@angular/http'
-
-import {
     isDevMode
 } from '@angular/core';
 
@@ -61,19 +57,11 @@ export class NotifyService  {
         this.snackBar.openFromComponent(NotifyComponent, config);
     }
 
-    error(error: Error|Response) {
+    error(error: Error) {
 
-        if (error instanceof Error) {
-            this.info(`${error.message}`, <NotifyOptions>{
-                icon: 'error'
-            });
-        } else if (error instanceof Response) {
-            const message = error.json().message;
-            this.info(`${this.i18n.message[message]}`, <NotifyOptions>{
-                icon: 'error'
-            });
-        }
-
+        this.info(`${error.message}`, <NotifyOptions>{
+            icon: 'error'
+        });
         console.error(error);
     }
 

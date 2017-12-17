@@ -3,8 +3,6 @@ import {
     Component,
 } from '@angular/core';
 
-import { Http } from '@angular/http';
-
 @Component({
         selector: 'cory-mat-loading',
         template: `
@@ -24,7 +22,7 @@ export class Loading {
         return window.corifeus.core.http.counter;
     }
 
-    constructor(public http: Http) {
+    constructor() {
      //   console.log(this.visible);
     }
 }
