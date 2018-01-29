@@ -1,6 +1,6 @@
 {
   "name": "corifeus-web-material",
-  "version": "5.2.33-313",
+  "version": "5.2.36-316",
   "corifeus": {
     "icon": "fa fa-tint",
     "code": "Amazing",
@@ -31,13 +31,13 @@
   },
   "homepage": "https://pages.corifeus.com/corifeus-web-material",
   "devDependencies": {
-    "corifeus-builder-angular": "^5.2.47-311"
+    "corifeus-builder-angular": "^5.2.50-314"
   },
   "dependencies": {
     "@angular/animations": "=5.2.2",
     "@angular/cdk": "^5.1.0",
     "@angular/material": "^5.1.0",
-    "corifeus-web": "^5.2.41-299",
+    "corifeus-web": "^5.2.44-302",
     "hammerjs": "^2.0.8",
     "lodash": "^4.17.4"
   },
