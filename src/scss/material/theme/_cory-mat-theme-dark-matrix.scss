@@ -273,6 +273,13 @@
   @include mat-toolbar-theme($theme_reverse);
   @include mat-button-theme($theme_reverse);
 
+  @include mat-expansion-panel-theme($theme);
+  @include mat-form-field-theme($theme);
+  @include mat-paginator-theme($theme);
+  @include mat-stepper-theme($theme);
+  @include mat-snack-bar-theme($theme_highlight);
+
+
   @include cory-mat-theme-container(mat-color($primary));
 
   @include cory-mat-theme-toolbar('dark', $theme);

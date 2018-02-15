@@ -6,7 +6,8 @@ import {
     ElementRef,
     HostListener,
     Inject,
-    isDevMode
+    isDevMode,
+    OnDestroy,
 } from '@angular/core';
 
 import { ThemeService } from '../theme'
@@ -17,9 +18,11 @@ import {MAT_SNACK_BAR_DATA, MatSnackBarRef } from '@angular/material';
 import { LocaleService, LocaleSubject } from 'corifeus-web';
 
 @Component({
-
+    host: {
+        '(window:resize)': 'onResize($event)'
+    },
     template: `
-        <div style="position: absolute;">
+        <div style="position: relative;">
             <mat-icon color="accent" #elementIcon>{{ data.options.icon }}</mat-icon>
             <span #elementMessage class="message" [innerHTML]="data.message | coryHtml"></span>
         </div>
@@ -72,7 +75,7 @@ export class NotifyComponent implements AfterViewInit {
     calculateWidth() {
         const snackElement = <HTMLElement>document.getElementsByTagName('snack-bar-container')[0];
         //fixme cache the colors
-        const backgroundColor = window.getComputedStyle(snackElement).getPropertyValue('background-color');
+        let backgroundColor = window.getComputedStyle(snackElement).getPropertyValue('background-color');
         let color = window.getComputedStyle(snackElement).getPropertyValue('color');
         let buttonColor = window.getComputedStyle(this.elementButton.nativeElement).color;
         let iconColor = window.getComputedStyle(this.elementIcon.nativeElement).color;
@@ -82,15 +85,18 @@ export class NotifyComponent implements AfterViewInit {
         this.elementIcon.nativeElement.style.color = iconColor;
         this.elementButton.nativeElement.style.color = buttonColor;
         this.elementMessage.nativeElement.style.color = color;
-        const currentMessageWidth = parseFloat(this.elementMessage.nativeElement.offsetWidth);
-        const currentWidth = parseFloat(window.getComputedStyle(snackElement.parentElement).width);
-        let calculatedWidth = currentWidth + currentMessageWidth - 140;
-        if (calculatedWidth > window.innerWidth) {
-            calculatedWidth = calculatedWidth - 70;
+
+        if (window.innerWidth > 599) {
+            const currentMessageWidth = parseFloat(this.elementMessage.nativeElement.offsetWidth);
+            const currentWidth = parseFloat(window.getComputedStyle(snackElement.parentElement).width);
+            let calculatedWidth = currentWidth + currentMessageWidth - 140;
+            if (calculatedWidth > window.innerWidth) {
+                calculatedWidth = window.innerWidth;
+            }
+            const calculatedWidthPixel = calculatedWidth + 'px'
+            snackElement.parentElement.style.width = calculatedWidthPixel;
+            snackElement.style.width = calculatedWidthPixel;
         }
-        const calculatedWidthPixel = calculatedWidth + 'px'
-        snackElement.parentElement.style.width = calculatedWidthPixel;
-        snackElement.style.width = calculatedWidthPixel;
     }
 
     ngAfterViewInit() {
@@ -99,16 +105,15 @@ export class NotifyComponent implements AfterViewInit {
         })
     }
 
-    @HostListener('window:keydown', ['$event'])
-    onKeyDown(event: Event) {
-        if (!isDevMode()) {
-            this.ctx.dismiss();
-        }
+    onResize() {
+        this.ctx.dismiss();
     }
 
-    @HostListener('window:resize', ['$event'])
-    onResize(event: any) {
-        this.calculateWidth();
-        console.log(window.innerWidth);
+    @HostListener('window:keydown', ['$event'])
+    onKeyDown(event: Event) {
+//        if (!isDevMode()) {
+            this.ctx.dismiss();
+//        }
     }
+
 }
