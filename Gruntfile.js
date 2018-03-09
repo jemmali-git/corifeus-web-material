@@ -12,7 +12,7 @@ module.exports = (grunt) => {
     const defaults = [];
 
 //    grunt.registerTask('default', defaults.concat(builder.config.task.build.angularAot));
-    grunt.registerTask('default', defaults.concat(builder.config.task.build.angular));
+    grunt.registerTask('default', defaults.concat(builder.config.task.build.angularAot));
 
     grunt.registerTask('dev', defaults.concat(builder.config.task.build.angular));
     grunt.registerTask('aot', defaults.concat(builder.config.task.build.angularAot));
@@ -21,4 +21,9 @@ module.exports = (grunt) => {
     grunt.registerTask('run', defaults.concat(builder.config.task.run.angular));
     grunt.registerTask('coverage', 'karma:cory-angular');
 
+
+    grunt.registerTask('test-connect', [
+        'connect:cory-angular',
+        'watch:cory-wait'
+    ])
 }
