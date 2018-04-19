@@ -7,7 +7,7 @@
     "publish": true,
     "nodejs": "v9.11.1"
   },
-  "description": "Corifeus Web Material - Amazing",
+  "description": "🌴 Corifeus Web Material - Amazing",
   "main": "src/index.ts",
   "directories": {
     "test": "test"
