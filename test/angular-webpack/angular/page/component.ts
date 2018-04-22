@@ -17,6 +17,24 @@ import {
         </fieldset>
         <br/>
         
+
+        <fieldset>
+            <legend>Fontawesome</legend>
+            <i class="fab fa-superpowers"></i> &nbsp; 
+            <i class="fas fa-database"></i> &nbsp; 
+            <i class="fas fa-coffee"></i> &nbsp; 
+            <i class="fas fa-cubes"></i> &nbsp; 
+            <i class="fas fa-shield-alt"></i> &nbsp; 
+            <i class="fas fa-server"></i> &nbsp; 
+            <i class="far fa-lightbulb"></i> &nbsp; 
+            <i class="fas fa-ship"></i> &nbsp; 
+            <i class="fas fa-tint"></i> &nbsp; 
+            <i class="fas fa-gavel"></i> &nbsp; 
+            <i class="fas fa-star"></i>  &nbsp; 
+            <i class="fas fa-sitemap"></i>
+        </fieldset>
+        <br/>
+        
         <fieldset>
             <legend>Button</legend>
             <span *ngFor="let color of colors">

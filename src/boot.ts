@@ -4,6 +4,14 @@ import {
     forwardRef
 } from '@angular/core';
 
+import fontawesome from '@fortawesome/fontawesome'
+import faSolid  from '@fortawesome/fontawesome-free-solid'
+import faRegular  from '@fortawesome/fontawesome-free-regular'
+import faBrands  from '@fortawesome/fontawesome-free-brands'
+fontawesome.library.add(faSolid)
+fontawesome.library.add(faRegular)
+fontawesome.library.add(faBrands)
+
 
 import {
     log
@@ -26,6 +34,8 @@ export class Boot {
         @Inject(forwardRef(() => ThemeService))  private theme: ThemeService,
     ) {
         log('booted');
+
+
         const module = 'material';
         settings.register(module, require('./json/settings.json'));
 
@@ -38,10 +48,11 @@ export class Boot {
 
         //TODO uglify breaks CSS imports
         //FIXME material icons, roboto, font-awesome
+//      @import url(https://fonts.googleapis.com/css?family=Roboto);
+//      @import url(https://fonts.googleapis.com/icon?family=Material+Icons);
+//      @import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
+/*
         const css = `
-        @import url(https://fonts.googleapis.com/icon?family=Material+Icons);
-        @import url(https://fonts.googleapis.com/css?family=Roboto);    
-        @import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
         `;
         const head = document.head || document.getElementsByTagName('head')[0];
         const style = document.createElement('style');
@@ -49,6 +60,7 @@ export class Boot {
         style.type = 'text/css';
         style.appendChild(document.createTextNode(css));
         head.appendChild(style);
+*/
     }
 
 }
