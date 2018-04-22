@@ -1,6 +1,6 @@
 {
   "name": "corifeus-web-material",
-  "version": "5.2.153-402",
+  "version": "5.2.155-403",
   "corifeus": {
     "icon": "fas fa-tint",
     "code": "Amazing",
@@ -31,7 +31,7 @@
   },
   "homepage": "https://pages.corifeus.com/corifeus-web-material",
   "devDependencies": {
-    "corifeus-builder-angular": "^5.2.266-404"
+    "corifeus-builder-angular": "^5.2.270-406"
   },
   "dependencies": {
     "@angular/animations": "=5.2.10",
@@ -41,7 +41,7 @@
     "@fortawesome/fontawesome-free-brands": "^5.0.10",
     "@fortawesome/fontawesome-free-regular": "^5.0.10",
     "@fortawesome/fontawesome-free-solid": "^5.0.10",
-    "corifeus-web": "^5.2.232-381",
+    "corifeus-web": "^5.2.234-382",
     "hammerjs": "^2.0.8",
     "lodash": "^4.17.5",
     "material-design-icons": "^3.0.1",
