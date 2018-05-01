@@ -18,12 +18,14 @@ import {MAT_SNACK_BAR_DATA, MatSnackBarRef } from '@angular/material';
 import { LocaleService, LocaleSubject } from 'corifeus-web';
 
 @Component({
+
     host: {
         '(window:resize)': 'onResize($event)'
     },
     template: `
         <div style="position: relative;">
             <mat-icon color="accent" #elementIcon>{{ data.options.icon }}</mat-icon>
+            &nbsp;
             <span #elementMessage class="message" [innerHTML]="data.message | coryHtml"></span>
         </div>
         <a mat-button color="accent" #elementButton class="cory-mat-notify-button" (click)="ctx.dismiss()">{{ this.i18n.title.ok }}</a>
@@ -33,12 +35,12 @@ import { LocaleService, LocaleSubject } from 'corifeus-web';
     styles: [`
         .message {
             position: relative;
-            top: -7px;
+            top: -6px;
         }
 
         [mat-button]{
             position: absolute;
-            top: 8px;
+            top: 10px;
             right: 4px;
             min-width: auto !important;
         }
@@ -86,22 +88,11 @@ export class NotifyComponent implements AfterViewInit {
         this.elementButton.nativeElement.style.color = buttonColor;
         this.elementMessage.nativeElement.style.color = color;
 
-        if (window.innerWidth > 599) {
-            const currentMessageWidth = parseFloat(this.elementMessage.nativeElement.offsetWidth);
-            const currentWidth = parseFloat(window.getComputedStyle(snackElement.parentElement).width);
-            let calculatedWidth = currentWidth + currentMessageWidth - 140;
-            if (calculatedWidth > window.innerWidth) {
-                calculatedWidth = window.innerWidth;
-            }
-            const calculatedWidthPixel = calculatedWidth + 'px'
-            snackElement.parentElement.style.width = calculatedWidthPixel;
-            snackElement.style.width = calculatedWidthPixel;
-        }
     }
 
     ngAfterViewInit() {
         this.ctx.afterOpened().subscribe(() => {
-           this.calculateWidth();
+            this.calculateWidth();
         })
     }
 
@@ -112,7 +103,7 @@ export class NotifyComponent implements AfterViewInit {
     @HostListener('window:keydown', ['$event'])
     onKeyDown(event: Event) {
 //        if (!isDevMode()) {
-            this.ctx.dismiss();
+             this.ctx.dismiss();
 //        }
     }
 

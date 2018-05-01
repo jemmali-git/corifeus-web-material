@@ -60,21 +60,6 @@ export class TranslationButton {
             this.setTooltip();
         });
 
-        this.mediaQuery.register([
-            <MediaQuerySetting>{
-                name: 'small',
-                min: 0,
-                max: 599,
-                type: MediaQuerySettingType.Width
-            },
-            <MediaQuerySetting>{
-                name: 'large',
-                min: 600,
-                max: Infinity,
-                type: MediaQuerySettingType.Width
-            }
-        ])
-
         this.mediaQuery.subscribe((settings : MediaQuerySetting[]) => {
             settings.forEach((setting) => this.setTooltip(setting.name))
         })
@@ -90,7 +75,7 @@ export class TranslationButton {
 
                 break;
 
-            default:
+            case 'large':
                 this.tooltip = undefined;
                 break;
         }

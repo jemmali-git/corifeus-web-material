@@ -16,6 +16,7 @@ body {
 @import 'variables';
 @import 'mixins';
 @import 'material-customization';
+@import 'hover';
 
 @import 'theme/cory-mat-theme-dark-matrix';
 @import 'theme/cory-mat-theme-light-forest';
@@ -40,6 +41,10 @@ body.cory-mat-theme-dark {
 .cory-mat-theme-dark {
   color: white;
 
+  .cory-mat-menu-divider {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  }
+
   .cory-mat-menu-item-active, .cory-mat-menu-item-active:hover {
     background-color: rgba(255, 255, 255, 0.2) !important;
   }
@@ -48,6 +53,10 @@ body.cory-mat-theme-dark {
 
 .cory-mat-theme-light {
   color: white;
+
+  .cory-mat-menu-divider {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
 
   .cory-mat-menu-item-active, .cory-mat-menu-item-active:hover {
     background-color: rgba(128, 128, 128, 0.2) !important;
@@ -61,24 +70,22 @@ body.cory-mat-theme-dark {
   };
 }
 
-.cory-mat-theme-dark,
-.cory-mat-theme-light {
 
-  a:hover .fa,
-  button:hover .fa,
-  a:hover mat-icon,
-  button:hover mat-icon,
-  a:hover + i.fa
-  {
-    transition: all 500ms;
-    transform: scale(1.1) rotate(360deg);
-  }
-}
+
+
 
 .cory-mat-container {
 
   .mat-card {
+    margin-top: 25px;
+    margin-bottom: 25px;
     box-shadow: 0px 0px 100px 0px rgba(0,0,0,0.25) !important;
+
+    @media screen and (max-width: $cory-mat-size-xsmall) {
+      margin-top: 0px;
+      margin-bottom: 0px;
+    };
+
   }
 
 

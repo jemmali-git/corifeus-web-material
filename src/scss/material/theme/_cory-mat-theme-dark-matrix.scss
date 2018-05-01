@@ -289,8 +289,8 @@
 
   @include cory-mat-autofill();
 
-  background-color: black;
-  background: radial-gradient(circle, rgba(black, 0.9), black);
+  background-color: rgba(0, 0, 0, 0.5);
+  background: radial-gradient(circle, rgba(black, 0.9), rgba(black, 0.8));
 
   //  @include cory-mat-theme('dark', $primary, $accent);
 }

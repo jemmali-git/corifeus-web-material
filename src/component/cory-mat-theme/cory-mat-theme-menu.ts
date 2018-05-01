@@ -25,13 +25,22 @@ const template = require('lodash/template');
     <button mat-menu-item disabled>
         {{ i18n.title.theme }}
     </button>
+    <div class="cory-mat-menu-divider"></div>
     <button mat-menu-item
-            *ngFor="let thisTheme of settings.themes.material"
+            *ngFor="let thisTheme of themeLight"
             (click)="this.clickChangeTheme(thisTheme)"
             [class.cory-mat-menu-item-active]="thisTheme == theme.current"
     >
         {{ i18n.themes.material[thisTheme] }}
     </button>
+    <div class="cory-mat-menu-divider"></div>
+    <button mat-menu-item
+            *ngFor="let thisTheme of themeDark"
+            (click)="this.clickChangeTheme(thisTheme)"
+            [class.cory-mat-menu-item-active]="thisTheme == theme.current"
+    >
+        {{ i18n.themes.material[thisTheme] }}
+    </button>        
 `,
 })
 export class ThemeMenu {
@@ -69,5 +78,16 @@ export class ThemeMenu {
         }
     }
 
+    public get themeLight() {
+        return this.settings.themes.material.filter((theme: string) => {
+            return theme.startsWith('cory-mat-theme-light')
+        })
+    }
+
+    public get themeDark() {
+        return this.settings.themes.material.filter((theme: string) => {
+            return theme.startsWith('cory-mat-theme-dark')
+        })
+    }
 
 }

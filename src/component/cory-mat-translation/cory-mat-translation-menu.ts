@@ -20,6 +20,7 @@ import {
      <button mat-menu-item disabled>
                 {{ i18n.material.title.language }}
             </button>
+            <div class="cory-mat-menu-divider"></div>
             <button
                     mat-menu-item *ngFor="let translation of settings.translations.language | coryKeys"
                     (click)="clickChangeTranslate(translation)"
