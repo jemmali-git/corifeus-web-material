@@ -18,7 +18,7 @@ import {
         </mat-menu>
 
         <button [color]="color" #buttonTheme mat-button [matMenuTriggerFor]="menuTheme" [matTooltip]="tooltip" [matTooltipPosition]="matTooltipPosition">
-            <mat-icon>color_lens</mat-icon>
+            <mat-icon>format_color_fill</mat-icon>
             <span class="cory-mat-hide-xsmall">
             {{ i18n.material.title.theme }}
             </span>

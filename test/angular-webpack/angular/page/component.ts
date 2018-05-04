@@ -4,10 +4,24 @@ import {
     OnDestroy
 } from '@angular/core';
 
+import {HttpClient} from '@angular/common/http';
+
+import {
+    NotifyService
+} from '../../../../src/services/notify/notify'
+
 
 @Component({
     selector: 'cory-web-material-test-theme',
     template: `
+       
+        <fieldset>
+            <legend>Request</legend>
+            <button mat-raised-button color="primary" (click)="clickRquest()">CLICK</button>
+            &nbsp;
+            Count: {{ counter }}
+        </fieldset>
+        <br/>
 
         <fieldset>
             <legend>Icon</legend>
@@ -16,7 +30,7 @@ import {
             <mat-icon>face</mat-icon>
         </fieldset>
         <br/>
-        
+
 
         <fieldset>
             <legend>Fontawesome</legend>
@@ -105,8 +119,42 @@ export class Components implements OnDestroy{
 
     public colors: string[] = ['default', 'primary', 'accent', 'warn'];
 
-    constructor( ) {
+    constructor(
+        private http: HttpClient,
+        private notify: NotifyService,
+    ) {
 //        window.corifeus.core.http.counter++;
+    }
+
+    async clickRquest() {
+        const items = [
+            'https://cdn.corifeus.com/git/corifeus/README.md',
+            'https://server.patrikx3.com/api/patrikx3/git/repos',
+            'https://server.patrikx3.com/api/core/util/random/10',
+        ]
+
+        //var item = items[Math.floor(Math.random()*items.length)];
+
+        items.forEach(async(item) => {
+            try {
+                const response : any = await this.http.get(item).toPromise()
+                //             const response : any = await this.http.get('https://server.patrikx3.com/api/patrikx3/test/521').toPromise()
+                this.notify.info('Super!')
+            } catch(e) {
+                this.notify.error(e)
+            }
+        })
+        try {
+            const response : any = await this.http.get('https://server.patrikx3.com/api/core/util/random/10').toPromise()
+            //             const response : any = await this.http.get('https://server.patrikx3.com/api/patrikx3/test/521').toPromise()
+            this.notify.info('Super!')
+        } catch(e) {
+            this.notify.error(e)
+        }
+    }
+
+    get counter() {
+        return window.corifeus.core.http.counter;
     }
 
     ngOnDestroy() {
