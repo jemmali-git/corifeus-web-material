@@ -5,7 +5,7 @@
   
 [![NPM](https://nodei.co/npm/corifeus-web-material.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/corifeus-web-material/)
 ---
-# 🌴 Corifeus Web Material - Amazing v6.0.15-448  
+# 🌴 Corifeus Web Material - Amazing v6.0.17-449  
 
 This is an open-source project. Star this repository if you like it, or even donate!  Thank you so much! :)
 
@@ -101,12 +101,12 @@ monochromatic, analogous, complementary, tradic
 
 ---
 
-[**CORIFEUS-WEB-MATERIAL**](https://pages.corifeus.com/corifeus-web-material) Build v6.0.15-448 
+[**CORIFEUS-WEB-MATERIAL**](https://pages.corifeus.com/corifeus-web-material) Build v6.0.17-449 
 
 [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software) [![Donate for Corifeus / P3X](https://img.shields.io/badge/Donate-Corifeus-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) 
 
 
-## Sponsors
+## P3X Sponsors
 
 [IntelliJ - The most intelligent Java IDE](https://www.jetbrains.com)
   
