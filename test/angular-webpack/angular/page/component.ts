@@ -100,14 +100,14 @@ import {
             <legend>Input</legend>
             <form class="cory-mat-form-full-width">
                 <div *ngFor="let color of colors">
+                    
                     <mat-form-field [color]="color" >
-                        <input matInput [placeholder]="'input ' + color" [value]="" type="date">
+                        <input matInput [matDatepicker]="picker" placeholder="Choose a date">
+                        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                        <mat-datepicker #picker></mat-datepicker>
                     </mat-form-field>
                 </div>
 
-                    <mat-form-field >
-                        <input matInput type="month" class="webkit-autofill" placeholder="input:-webkit-autofill">
-                    </mat-form-field>
 
             </form>
         </fieldset>

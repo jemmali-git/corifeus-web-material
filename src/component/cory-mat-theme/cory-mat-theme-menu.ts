@@ -16,7 +16,7 @@ import {
     NotifyService
 } from '../../services/notify/notify';
 
-const template = require('lodash/template');
+import { template } from 'lodash';
 
 // requires to be in a mat-menu
 @Component({

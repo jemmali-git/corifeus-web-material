@@ -2,7 +2,7 @@ import {
     Injectable,
 } from '@angular/core';
 
-const kebabCase = require('lodash/kebabCase');
+import { kebabCase } from 'lodash';
 
 import {SettingsService, CookieService} from 'corifeus-web';
 
