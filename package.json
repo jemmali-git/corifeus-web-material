@@ -1,57 +1,57 @@
 {
-  "name": "corifeus-web-material",
-  "version": "6.0.36-474",
-  "corifeus": {
-    "icon": "fas fa-tint",
-    "code": "Amazing",
-    "publish": true,
-    "nodejs": "v10.5.0",
-    "reponame": "corifeus-web-material",
-    "opencollective": false,
-    "build": true
-  },
-  "description": "🌴 Corifeus Web Material - Amazing",
-  "main": "src/index.ts",
-  "directories": {
-    "test": "test"
-  },
-  "scripts": {
-    "test": "grunt"
-  },
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/patrikx3/corifeus-web-material.git"
-  },
-  "keywords": [
-    "corifeus",
-    "web",
-    "api"
-  ],
-  "author": "Patrik Laszlo <alabard@gmail.com>",
-  "bugs": {
-    "url": "https://github.com/patrikx3/corifeus-web-material/issues"
-  },
-  "homepage": "https://pages.corifeus.com/corifeus-web-material",
-  "devDependencies": {
-    "corifeus-builder-angular": "^6.0.77-447"
-  },
-  "dependencies": {
-    "@angular/animations": "=6.0.6",
-    "@angular/cdk": "^6.3.1",
-    "@angular/material": "^6.3.1",
-    "@fortawesome/fontawesome": "^1.1.8",
-    "@fortawesome/fontawesome-free-brands": "^5.0.13",
-    "@fortawesome/fontawesome-free-regular": "^5.0.13",
-    "@fortawesome/fontawesome-free-solid": "^5.0.13",
-    "@types/lodash": "^4.14.110",
-    "corifeus-web": "^6.0.45-433",
-    "hammerjs": "^2.0.8",
-    "lodash": "^4.17.10",
-    "material-design-icons": "^3.0.1",
-    "roboto-fontface": "^0.9.0"
-  },
-  "engines": {
-    "node": ">=10.2.1"
-  }
+    "name": "corifeus-web-material",
+    "version": "6.0.39-478",
+    "corifeus": {
+        "icon": "fas fa-tint",
+        "code": "Amazing",
+        "publish": true,
+        "nodejs": "v10.6.0",
+        "reponame": "corifeus-web-material",
+        "opencollective": false,
+        "build": true
+    },
+    "description": "🌴 Corifeus Web Material - Amazing",
+    "main": "src/index.ts",
+    "directories": {
+        "test": "test"
+    },
+    "scripts": {
+        "test": "grunt"
+    },
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/patrikx3/corifeus-web-material.git"
+    },
+    "keywords": [
+        "corifeus",
+        "web",
+        "api"
+    ],
+    "author": "Patrik Laszlo <alabard@gmail.com>",
+    "bugs": {
+        "url": "https://github.com/patrikx3/corifeus-web-material/issues"
+    },
+    "homepage": "https://pages.corifeus.com/corifeus-web-material",
+    "devDependencies": {
+        "corifeus-builder-angular": "^6.0.91-455"
+    },
+    "dependencies": {
+        "@angular/animations": "=6.0.7",
+        "@angular/cdk": "^6.3.2",
+        "@angular/material": "^6.3.2",
+        "@fortawesome/fontawesome": "^1.1.8",
+        "@fortawesome/fontawesome-free-brands": "^5.0.13",
+        "@fortawesome/fontawesome-free-regular": "^5.0.13",
+        "@fortawesome/fontawesome-free-solid": "^5.0.13",
+        "@types/lodash": "^4.14.110",
+        "corifeus-web": "^6.0.52-441",
+        "hammerjs": "^2.0.8",
+        "lodash": "^4.17.10",
+        "material-design-icons": "^3.0.1",
+        "roboto-fontface": "^0.9.0"
+    },
+    "engines": {
+        "node": ">=10.5.0"
+    }
 }
