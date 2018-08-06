@@ -1,5 +1,6 @@
 import {
     Component,
+    OnDestroy
 } from '@angular/core';
 
 
@@ -19,10 +20,13 @@ import { State, LocaleService, LocaleSubject } from 'corifeus-web';
     </div>
 `,
 })
-export class Http404 {
+export class Http404 implements OnDestroy {
 
     url: string;
     i18n: any;
+
+    letKeep404: any;
+    timeout: any;
 
     constructor(
         public locale: LocaleService
@@ -38,18 +42,18 @@ export class Http404 {
 
         let maxWait = 10000;
         let waiter = 0;
-        const letKeep404 = setInterval(() => {
+        this.letKeep404 = setInterval(() => {
             its404();
             if (window.corifeus.core.http.counter === 0) {
                 waiter++;
                 if (waiter > 10) {
-                   clearInterval(letKeep404);
+                   clearInterval(this.letKeep404);
                 }
             }
         }, 100)
 
-        setTimeout(() => {
-            clearInterval(letKeep404);
+        this.timeout = setTimeout(() => {
+            clearInterval(this.letKeep404);
             its404();
         }, maxWait);
 
@@ -58,5 +62,10 @@ export class Http404 {
         });
 
         this.url = State.RequestPath
+    }
+
+    ngOnDestroy() {
+        clearInterval(this.letKeep404);
+        clearTimeout(this.timeout)
     }
 }
