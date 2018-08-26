@@ -278,6 +278,7 @@
   @include mat-paginator-theme($theme);
   @include mat-stepper-theme($theme);
   @include mat-snack-bar-theme($theme_highlight);
+  @include mat-datepicker-theme($theme_reverse);
 
 
   @include cory-mat-theme-container(mat-color($primary));
