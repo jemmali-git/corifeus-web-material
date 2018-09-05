@@ -4,13 +4,7 @@ import {
     forwardRef
 } from '@angular/core';
 
-import fontawesome from '@fortawesome/fontawesome'
-import faSolid  from '@fortawesome/fontawesome-free-solid'
-import faRegular  from '@fortawesome/fontawesome-free-regular'
-import faBrands  from '@fortawesome/fontawesome-free-brands'
-fontawesome.library.add(faSolid)
-fontawesome.library.add(faRegular)
-fontawesome.library.add(faBrands)
+require('@fortawesome/fontawesome-free/js/all')
 
 
 import {
