@@ -26,12 +26,94 @@ import {
     CorifeusMaterialModule
 } from '../../../src'
 
+import {
+    /*
+    MatAutocompleteModule,
+    MatButtonModule,
+    MatButtonToggleModule,
+    MatCardModule,
+    MatCheckboxModule,
+    MatChipsModule,
+    MatCommonModule,
+    MatDialogModule,
+    MatExpansionModule,
+    MatGridListModule,
+    MatIconModule,
+    MatInputModule,
+    MatLineModule,
+    MatListModule,
+    MatMenuModule,
+    MatNativeDateModule,
+    MatOptionModule,
+    MatPaginatorModule,
+    MatProgressBarModule,
+    MatProgressSpinnerModule,
+    MatRadioModule,
+    MatRippleModule,
+    MatSelectModule,
+    MatSliderModule,
+    MatSnackBarModule,
+    MatSortModule,
+    MatTableModule,
+    MatTabsModule,
+    MatTooltipModule,
+    */
+//    OverlayContainer,
+//    MatSelectionList,
+    MatSidenavModule,
+    MatSlideToggleModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+
+} from '@angular/material';
+
 /***
  * NEVER USE A EXPORT * AS, NEED THE EXACT COMPONENT FOR INJECTABLE FUNCTION!!!!
  */
 
 @NgModule({
     imports: [
+        /*
+        MatAutocompleteModule,
+        MatButtonModule,
+        MatButtonToggleModule,
+        MatCardModule,
+        MatCheckboxModule,
+        MatChipsModule,
+        MatCommonModule,
+        MatDialogModule,
+        MatExpansionModule,
+        MatGridListModule,
+        MatIconModule,
+        MatInputModule,
+        MatLineModule,
+        MatListModule,
+        MatMenuModule,
+        MatNativeDateModule,
+        MatOptionModule,
+        MatPaginatorModule,
+        MatProgressBarModule,
+        MatProgressSpinnerModule,
+        MatRadioModule,
+        MatRippleModule,
+        MatSelectModule,
+        MatSliderModule,
+        MatSliderModule,
+        MatSnackBarModule,
+        MatSortModule,
+        MatTableModule,
+        MatTabsModule,
+        MatTooltipModule,
+//        OverlayContainer,
+//        MatSelectionList,
+        // material modules
+        */
+        MatSidenavModule,
+        MatSlideToggleModule,
+        MatDatepickerModule,
+        MatNativeDateModule,
+
+
         CorifeusModule,
         RouterModule.forRoot(routes),
         CorifeusMaterialModule,
