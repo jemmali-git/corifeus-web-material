@@ -116,7 +116,7 @@ Cannot enable prod mode.
  "compilerOptions": {
     "skipLibCheck": true,
     "outDir": "build/aot",
-    "target": "es5",
+    "target": "es2015",
     "module": "commonjs",
  }
 }
@@ -128,7 +128,7 @@ Cannot enable prod mode.
  "compilerOptions": {
     "skipLibCheck": true,
     "outDir": "build/aot",
-    "target": "es5",
+    "target": "es2015",
     "module": "esnext",
  }
 }
