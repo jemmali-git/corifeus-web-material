@@ -1,7 +1,7 @@
 import {
     Component,
     Inject,
-    forwardRef,
+
     OnInit,
     ViewChild,
     AfterViewChecked,
@@ -42,18 +42,18 @@ export class Login implements AfterViewChecked {
 
     auto: boolean;
 
-    @ViewChild('loginForm')
+    @ViewChild('loginForm', {read: ElementRef, static: false})
     loginForm: NgForm;
 
-    @ViewChild('inputUsername')
+    @ViewChild('inputUsername', {read: ElementRef, static: false})
     inputUsername: ElementRef;
 
-    @ViewChild('elementForm')
+    @ViewChild('elementForm', {read: ElementRef, static: false})
     elementForm: ElementRef;
 
     constructor(
-        @Inject(forwardRef(() => NotifyService))  private notify: NotifyService,
-        @Inject(forwardRef(() => ThemeService))  private theme: ThemeService,
+        private notify: NotifyService,
+        private theme: ThemeService,
         protected locale: LocaleService,
         protected settingsAll: SettingsService,
         private auth: AuthService,

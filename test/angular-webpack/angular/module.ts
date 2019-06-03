@@ -15,6 +15,7 @@ import { Raw } from './page/raw';
 import { Layout  } from './layout';
 
 
+
 import { routes } from './routes';
 
 import {
@@ -26,46 +27,12 @@ import {
     CorifeusMaterialModule
 } from '../../../src'
 
-import {
-    /*
-    MatAutocompleteModule,
-    MatButtonModule,
-    MatButtonToggleModule,
-    MatCardModule,
-    MatCheckboxModule,
-    MatChipsModule,
-    MatCommonModule,
-    MatDialogModule,
-    MatExpansionModule,
-    MatGridListModule,
-    MatIconModule,
-    MatInputModule,
-    MatLineModule,
-    MatListModule,
-    MatMenuModule,
-    MatNativeDateModule,
-    MatOptionModule,
-    MatPaginatorModule,
-    MatProgressBarModule,
-    MatProgressSpinnerModule,
-    MatRadioModule,
-    MatRippleModule,
-    MatSelectModule,
-    MatSliderModule,
-    MatSnackBarModule,
-    MatSortModule,
-    MatTableModule,
-    MatTabsModule,
-    MatTooltipModule,
-    */
-//    OverlayContainer,
-//    MatSelectionList,
-    MatSidenavModule,
-    MatSlideToggleModule,
-    MatDatepickerModule,
-    MatNativeDateModule,
-
-} from '@angular/material';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatNativeDateModule} from '@angular/material/';
+import {MatListModule} from '@angular/material/list';
+import {MatDividerModule} from '@angular/material/divider';
 
 /***
  * NEVER USE A EXPORT * AS, NEED THE EXACT COMPONENT FOR INJECTABLE FUNCTION!!!!
@@ -73,46 +40,12 @@ import {
 
 @NgModule({
     imports: [
-        /*
-        MatAutocompleteModule,
-        MatButtonModule,
-        MatButtonToggleModule,
-        MatCardModule,
-        MatCheckboxModule,
-        MatChipsModule,
-        MatCommonModule,
-        MatDialogModule,
-        MatExpansionModule,
-        MatGridListModule,
-        MatIconModule,
-        MatInputModule,
-        MatLineModule,
-        MatListModule,
-        MatMenuModule,
-        MatNativeDateModule,
-        MatOptionModule,
-        MatPaginatorModule,
-        MatProgressBarModule,
-        MatProgressSpinnerModule,
-        MatRadioModule,
-        MatRippleModule,
-        MatSelectModule,
-        MatSliderModule,
-        MatSliderModule,
-        MatSnackBarModule,
-        MatSortModule,
-        MatTableModule,
-        MatTabsModule,
-        MatTooltipModule,
-//        OverlayContainer,
-//        MatSelectionList,
-        // material modules
-        */
+
         MatSidenavModule,
         MatSlideToggleModule,
         MatDatepickerModule,
         MatNativeDateModule,
-
+        MatListModule, MatDividerModule,
 
         CorifeusModule,
         RouterModule.forRoot(routes),

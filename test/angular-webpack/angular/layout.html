@@ -3,19 +3,23 @@
 
 <mat-sidenav-container class="cory-mat-sidenav-container">
     <mat-sidenav position="end" #sidenav class="cory-mat-sidenav">
-        <div style="font-size: 1.5em; opacity: 0.5;">
+        <div style="font-size: 1.5em; opacity: 0.5; padding: 15px;">
             {{ i18n.material.title.menu }}
         </div>
 
         <div (click)="sidenav.close()">
 
-            <button mat-button [routerLink]="'/full/components'" style="text-align: left">
-                Components
-            </button>
-
-            <button mat-button [routerLink]="'/login'" style="text-align: left">
-                Login
-            </button>
+            <mat-list>
+                <mat-divider></mat-divider>
+                <mat-list-item  [routerLink]="'/full/components'" routerLinkActive="active">
+                    Components
+                </mat-list-item>
+                <mat-divider></mat-divider>
+                <mat-list-item [routerLink]="'/login'" routerLinkActive="active">
+                    Login
+                </mat-list-item>
+                <mat-divider></mat-divider>
+            </mat-list>
 
 
 

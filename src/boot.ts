@@ -1,7 +1,7 @@
 import {
     Injectable,
     Inject,
-    forwardRef
+
 } from '@angular/core';
 
 require('@fortawesome/fontawesome-free/js/all')
@@ -25,7 +25,7 @@ export class Boot {
     constructor(
         private settings : SettingsService,
         private locale: LocaleService,
-        @Inject(forwardRef(() => ThemeService))  private theme: ThemeService,
+        private theme: ThemeService,
     ) {
         log('booted');
 

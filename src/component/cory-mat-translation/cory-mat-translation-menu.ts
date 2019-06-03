@@ -1,7 +1,6 @@
 import {
     Component,
     Inject,
-    forwardRef,
 } from '@angular/core';
 
 import {
@@ -22,7 +21,7 @@ import {
             </button>
             <div class="cory-mat-menu-divider"></div>
             <button
-                    mat-menu-item *ngFor="let translation of settings.translations.language | coryKeys"
+                    mat-menu-item *ngFor="let translation of translationKeys"
                     (click)="clickChangeTranslate(translation)"
                     [class.cory-mat-menu-item-active]="translation == locale.current"
             >
@@ -37,7 +36,7 @@ export class TranslationMenu {
     settings: any;
 
     constructor(
-        @Inject(forwardRef(() => NotifyService))  private notify: NotifyService,
+        private notify: NotifyService,
         protected locale: LocaleService,
         protected settingsAll: SettingsService
     ) {
@@ -57,4 +56,8 @@ export class TranslationMenu {
         }
     }
 
+
+    get translationKeys() {
+        return Object.keys(this.settings.translations.language)
+    }
 }

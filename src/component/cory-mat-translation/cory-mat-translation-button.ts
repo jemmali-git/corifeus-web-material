@@ -4,12 +4,6 @@ import {
 } from '@angular/core';
 
 import {
-    MenuPositionX,
-    MenuPositionY
-
-} from '@angular/material'
-
-import {
     LocaleService, SettingsService, LocaleSubject,
     MediaQueryService, MediaQuerySettingType, MediaQuerySetting
 } from "corifeus-web";

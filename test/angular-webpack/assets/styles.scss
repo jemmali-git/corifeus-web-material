@@ -1,10 +1,34 @@
 @import "../../../src/scss/all";
+@import '@angular/material/theming';
 
+.cory-mat-theme-light {
+  .cory-mat-sidenav {
+    mat-list-item.active {
+      background-color: mat-color($mat-grey, 200);
+    }
+    mat-list-item:hover {
+      background-color: mat-color($mat-grey, 300);
+    }
+  }
+}
+
+.cory-mat-theme-dark {
+  .cory-mat-sidenav {
+    mat-list-item.active {
+      background-color: mat-color($mat-grey, A700);
+    }
+    mat-list-item:hover {
+      background-color: mat-color($mat-grey, A400);
+    }
+  }
+}
 
 .cory-mat-sidenav {
-  padding: 20px;
-  width: 200px;
+  min-width: 250px;
   position: relative;
+  mat-list-item {
+    cursor: pointer;
+  }
 }
 
 .cory-mat-sidenav-container {

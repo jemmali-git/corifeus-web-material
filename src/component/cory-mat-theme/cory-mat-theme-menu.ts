@@ -1,7 +1,6 @@
 import {
     Component,
     Inject,
-    forwardRef,
 } from '@angular/core';
 
 import {
@@ -50,8 +49,8 @@ export class ThemeMenu {
     settings: any;
 
     constructor(
-        @Inject(forwardRef(() => NotifyService))  private notify: NotifyService,
-        @Inject(forwardRef(() => ThemeService))  private theme: ThemeService,
+        private notify: NotifyService,
+        private theme: ThemeService,
         protected locale: LocaleService,
         protected settingsAll: SettingsService
     ) {

@@ -13,7 +13,13 @@ import {
 import { ThemeService } from '../theme'
 import { ColorService } from 'corifeus-web'
 
-import {MAT_SNACK_BAR_DATA, MatSnackBarRef } from '@angular/material';
+import {MAT_SNACK_BAR_DATA, MatSnackBarRef } from '@angular/material/snack-bar';
+
+
+import {
+    DomSanitizer
+} from '@angular/platform-browser'
+
 
 import { LocaleService, LocaleSubject } from 'corifeus-web';
 
@@ -26,7 +32,7 @@ import { LocaleService, LocaleSubject } from 'corifeus-web';
         <div style="position: relative;">
             <mat-icon color="accent" #elementIcon>{{ data.options.icon }}</mat-icon>
             &nbsp;
-            <span #elementMessage class="message" [innerHTML]="data.message | coryHtml"></span>
+            <span #elementMessage class="message" [innerHTML]="transformHtml(data.message)"></span>
         </div>
         <a mat-button color="accent" #elementButton class="cory-mat-notify-button" (click)="ctx.dismiss()">{{ this.i18n.title.ok }}</a>
 
@@ -49,9 +55,9 @@ import { LocaleService, LocaleSubject } from 'corifeus-web';
 @Injectable()
 export class NotifyComponent implements AfterViewInit {
 
-    @ViewChild('elementButton', {read: ElementRef}) elementButton : ElementRef;
-    @ViewChild('elementIcon', {read: ElementRef}) elementIcon : ElementRef;
-    @ViewChild('elementMessage', {read: ElementRef}) elementMessage : ElementRef;
+    @ViewChild('elementButton', {read: ElementRef, static: false}) elementButton : ElementRef;
+    @ViewChild('elementIcon', {read: ElementRef, static: false}) elementIcon : ElementRef;
+    @ViewChild('elementMessage', {read: ElementRef, static: false}) elementMessage : ElementRef;
 
     inited: boolean = false;
 
@@ -65,6 +71,7 @@ export class NotifyComponent implements AfterViewInit {
         private theme: ThemeService,
         private color: ColorService,
         @Inject(MAT_SNACK_BAR_DATA) data: any,
+        private _sanitizer: DomSanitizer,
     ) {
         this.locale.subscribe((subject : LocaleSubject) => {
             this.i18n = subject.locale.data.material;
@@ -107,4 +114,8 @@ export class NotifyComponent implements AfterViewInit {
 //        }
     }
 
+
+    transformHtml(html: string) : any {
+        return this._sanitizer.bypassSecurityTrustHtml(html);
+    }
 }

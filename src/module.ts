@@ -1,47 +1,18 @@
 import { NgModule, ModuleWithProviders } from '@angular/core';
 import { CorifeusModule }  from 'corifeus-web';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {
-    /*
-        MatAutocompleteModule,
-        MatButtonToggleModule,
-        MatChipsModule,
-        MatCommonModule,
-        MatDatepickerModule,
-        MatDialogModule,
-        MatExpansionModule,
-        MatGridListModule,
-        MatLineModule,
-        MatListModule,
-        MatNativeDateModule,
-        MatOptionModule,
-        MatPaginatorModule,
-        MatProgressSpinnerModule,
-        MatRadioModule,
-        MatRippleModule,
-        MatSelectModule,
-        MatSidenavModule,
-        MatSliderModule,
-        MatSlideToggleModule,
-        MatSortModule,
-        MatTableModule,
-        MatTabsModule,
 
-    //    OverlayContainer,
-    //    MatSelectionList,
-    */
-    MatIconModule,
-    MatProgressBarModule,
-    MatMenuModule,
-    MatButtonModule,
-    MatTooltipModule,
-    MatToolbarModule,
-    MatInputModule,
-    MatCardModule,
-    MatCheckboxModule,
-    MatSnackBarModule,
+import { MatIconModule } from '@angular/material/icon'
+import { MatProgressBarModule } from '@angular/material/progress-bar'
+import { MatMenuModule, } from '@angular/material/menu'
+import { MatButtonModule, } from '@angular/material/button'
+import { MatTooltipModule, } from '@angular/material/tooltip'
+import { MatToolbarModule, } from '@angular/material/toolbar'
+import { MatInputModule, } from '@angular/material/input'
+import { MatCardModule, } from '@angular/material/card'
+import { MatCheckboxModule, } from '@angular/material/checkbox'
+import { MatSnackBarModule, } from '@angular/material/snack-bar'
 
-} from '@angular/material';
 import { Boot } from './boot';
 
 import { ThemeService } from './services/theme'
