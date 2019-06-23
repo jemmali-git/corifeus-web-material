@@ -26,9 +26,11 @@
     "test/angular-karma",
     "build/browser"
   ],
-  "angularCompilerOptions": {
+  "angularCompilerOptions-save": {
     "annotationsAs": "decorators",
-    "preserveWhitespaces": false,
+    "preserveWhitespaces": false
+  },
+  "angularCompilerOptions": {
     "enableIvy": false
   }
 }
