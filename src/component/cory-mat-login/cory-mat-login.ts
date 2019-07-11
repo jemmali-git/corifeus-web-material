@@ -42,7 +42,7 @@ export class Login implements AfterViewChecked {
 
     auto: boolean;
 
-    @ViewChild('loginForm', {read: ElementRef, static: false})
+    @ViewChild('loginForm', {static: false})
     loginForm: NgForm;
 
     @ViewChild('inputUsername', {read: ElementRef, static: false})
@@ -68,7 +68,7 @@ export class Login implements AfterViewChecked {
 
 
     ngAfterViewChecked() {
-            //this.inputUsername.nativeElement.focus();
+        //this.inputUsername.nativeElement.focus();
     }
 
     async onSubmit() {

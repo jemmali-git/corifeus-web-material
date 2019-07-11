@@ -2,13 +2,13 @@ export * from './component';
 
 export * from './module';
 
-import {log } from 'corifeus-web';
+import {log} from 'corifeus-web';
 
 export * from './services';
 
 const logMaterial = log.factory('material');
 
-export { logMaterial as log };
+export {logMaterial as log};
 
 export * from './boot';
 

@@ -1,5 +1,5 @@
 {
-  "server": {
-    "url": "https://localhost:23501"
-  }
+    "server": {
+        "url": "https://server.patrikx3.com"
+    }
 }

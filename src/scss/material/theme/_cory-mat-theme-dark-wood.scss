@@ -2,10 +2,10 @@
 
 .cory-mat-theme-dark-wood {
 
-  $primary:  mat-palette($mat-brown);
-  $accent: mat-palette($mat-green, 600, 400, 700);
+    $primary: mat-palette($mat-brown);
+    $accent: mat-palette($mat-green, 600, 400, 700);
 
-  @include cory-mat-theme('dark', $primary, $accent);
+    @include cory-mat-theme('dark', $primary, $accent);
 
 }
 

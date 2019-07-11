@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
     selector: 'cory-web-material-test-app',
@@ -6,4 +6,5 @@ import { Component } from '@angular/core';
     <router-outlet></router-outlet>
   `
 })
-export class Application { }
+export class Application {
+}

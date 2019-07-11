@@ -15,7 +15,7 @@ import {
     NotifyService
 } from '../../services/notify/notify';
 
-import { template } from 'lodash';
+import {template} from 'lodash';
 
 // requires to be in a mat-menu
 @Component({
@@ -50,8 +50,8 @@ export class ThemeMenu {
 
     constructor(
         private notify: NotifyService,
-        private theme: ThemeService,
-        protected locale: LocaleService,
+        public theme: ThemeService,
+        public locale: LocaleService,
         protected settingsAll: SettingsService
     ) {
         this.settings = settingsAll.data.material;
@@ -72,7 +72,7 @@ export class ThemeMenu {
             });
             const templateFactory = template(this.i18n.message.theme.changed);
             this.notify.info(templateFactory(parameters));
-        } catch(e) {
+        } catch (e) {
             this.notify.error(e);
         }
     }

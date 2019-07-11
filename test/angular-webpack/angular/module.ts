@@ -1,22 +1,22 @@
+
 import {
     NgModule,
     Injectable,
 } from '@angular/core';
 
-import { RouterModule } from '@angular/router';
+import {RouterModule} from '@angular/router';
 
-import { Application  } from './application';
+import {Application} from './application';
 
-import { Components } from './page/component';
-import { Login } from './page/login';
-import { FullPage } from './page/full-page';
-import { Raw } from './page/raw';
+import {Components} from './page/component';
+import {Login} from './page/login';
+import {FullPage} from './page/full-page';
+import {Raw} from './page/raw';
 
-import { Layout  } from './layout';
+import {Layout} from './layout';
 
 
-
-import { routes } from './routes';
+import {routes} from './routes';
 
 import {
     CorifeusModule,
@@ -59,9 +59,8 @@ import {MatDividerModule} from '@angular/material/divider';
         FullPage,
         Raw,
     ],
-    providers: [
-    ],
-    bootstrap: [ Application ]
+    providers: [],
+    bootstrap: [Application]
 })
 export class Module {
 

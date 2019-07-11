@@ -6,14 +6,13 @@ import {
     ElementRef,
     HostListener,
     Inject,
-    isDevMode,
-    OnDestroy,
+
 } from '@angular/core';
 
-import { ThemeService } from '../theme'
-import { ColorService } from 'corifeus-web'
+import {ThemeService} from '../theme'
+import {ColorService} from 'corifeus-web'
 
-import {MAT_SNACK_BAR_DATA, MatSnackBarRef } from '@angular/material/snack-bar';
+import {MAT_SNACK_BAR_DATA, MatSnackBarRef} from '@angular/material/snack-bar';
 
 
 import {
@@ -21,13 +20,10 @@ import {
 } from '@angular/platform-browser'
 
 
-import { LocaleService, LocaleSubject } from 'corifeus-web';
+import {LocaleService, LocaleSubject} from 'corifeus-web';
 
 @Component({
 
-    host: {
-        '(window:resize)': 'onResize($event)'
-    },
     template: `
         <div style="position: relative;">
             <mat-icon color="accent" #elementIcon>{{ data.options.icon }}</mat-icon>
@@ -55,9 +51,9 @@ import { LocaleService, LocaleSubject } from 'corifeus-web';
 @Injectable()
 export class NotifyComponent implements AfterViewInit {
 
-    @ViewChild('elementButton', {read: ElementRef, static: false}) elementButton : ElementRef;
-    @ViewChild('elementIcon', {read: ElementRef, static: false}) elementIcon : ElementRef;
-    @ViewChild('elementMessage', {read: ElementRef, static: false}) elementMessage : ElementRef;
+    @ViewChild('elementButton', {read: ElementRef, static: false}) elementButton: ElementRef;
+    @ViewChild('elementIcon', {read: ElementRef, static: false}) elementIcon: ElementRef;
+    @ViewChild('elementMessage', {read: ElementRef, static: false}) elementMessage: ElementRef;
 
     inited: boolean = false;
 
@@ -73,12 +69,11 @@ export class NotifyComponent implements AfterViewInit {
         @Inject(MAT_SNACK_BAR_DATA) data: any,
         private _sanitizer: DomSanitizer,
     ) {
-        this.locale.subscribe((subject : LocaleSubject) => {
+        this.locale.subscribe((subject: LocaleSubject) => {
             this.i18n = subject.locale.data.material;
         });
         this.data = data;
     }
-
 
 
     calculateWidth() {
@@ -110,12 +105,12 @@ export class NotifyComponent implements AfterViewInit {
     @HostListener('window:keydown', ['$event'])
     onKeyDown(event: Event) {
 //        if (!isDevMode()) {
-             this.ctx.dismiss();
+        this.ctx.dismiss();
 //        }
     }
 
 
-    transformHtml(html: string) : any {
+    transformHtml(html: string): any {
         return this._sanitizer.bypassSecurityTrustHtml(html);
     }
 }

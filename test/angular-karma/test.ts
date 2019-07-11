@@ -1,6 +1,6 @@
 // you need unlinked npm-s!!!
 
-import { TestBed } from '@angular/core/testing';
+import {TestBed} from '@angular/core/testing';
 
 import * as test from '../../src/index';
 
@@ -14,7 +14,7 @@ describe('Material', () => {
             }
         );
     });
-    it ('should work', () => {
+    it('should work', () => {
 //        let fixture = TestBed.createComponent(Page);
 //        expect(fixture.componentInstance instanceof Page).toBe(true, 'should create a Page');
     });

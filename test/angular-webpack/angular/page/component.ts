@@ -112,10 +112,10 @@ import {
             </form>
         </fieldset>
 `
-       
+
 })
 @Injectable()
-export class Components implements OnDestroy{
+export class Components implements OnDestroy {
 
     public colors: string[] = ['default', 'primary', 'accent', 'warn'];
 
@@ -135,20 +135,20 @@ export class Components implements OnDestroy{
 
         //var item = items[Math.floor(Math.random()*items.length)];
 
-        items.forEach(async(item) => {
+        items.forEach(async (item) => {
             try {
-                const response : any = await this.http.get(item).toPromise()
+                const response: any = await this.http.get(item).toPromise()
                 //             const response : any = await this.http.get('https://server.patrikx3.com/api/patrikx3/test/521').toPromise()
                 this.notify.info('Super!')
-            } catch(e) {
+            } catch (e) {
                 this.notify.error(e)
             }
         })
         try {
-            const response : any = await this.http.get('https://server.patrikx3.com/api/core/util/random/10').toPromise()
+            const response: any = await this.http.get('https://server.patrikx3.com/api/core/util/random/10').toPromise()
             //             const response : any = await this.http.get('https://server.patrikx3.com/api/patrikx3/test/521').toPromise()
             this.notify.info('Super!')
-        } catch(e) {
+        } catch (e) {
             this.notify.error(e)
         }
     }

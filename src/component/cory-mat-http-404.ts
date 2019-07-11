@@ -4,7 +4,7 @@ import {
 } from '@angular/core';
 
 
-import { State, LocaleService, LocaleSubject } from 'corifeus-web';
+import {State, LocaleService, LocaleSubject} from 'corifeus-web';
 
 @Component({
     selector: 'cory-mat-http-404',
@@ -30,10 +30,9 @@ export class Http404 implements OnDestroy {
 
     constructor(
         public locale: LocaleService
-
     ) {
 
-        history.replaceState({} , State.RequestPath , State.RequestPath);
+        history.replaceState({}, State.RequestPath, State.RequestPath);
 
         const its404 = () => {
             State.NotFound = true;
@@ -47,7 +46,7 @@ export class Http404 implements OnDestroy {
             if (window.corifeus.core.http.counter === 0) {
                 waiter++;
                 if (waiter > 10) {
-                   clearInterval(this.letKeep404);
+                    clearInterval(this.letKeep404);
                 }
             }
         }, 100)

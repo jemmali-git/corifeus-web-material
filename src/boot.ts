@@ -23,7 +23,7 @@ import {
 export class Boot {
 
     constructor(
-        private settings : SettingsService,
+        private settings: SettingsService,
         private locale: LocaleService,
         private theme: ThemeService,
     ) {
@@ -45,16 +45,16 @@ export class Boot {
 //      @import url(https://fonts.googleapis.com/css?family=Roboto);
 //      @import url(https://fonts.googleapis.com/icon?family=Material+Icons);
 //      @import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
-/*
-        const css = `
-        `;
-        const head = document.head || document.getElementsByTagName('head')[0];
-        const style = document.createElement('style');
-
-        style.type = 'text/css';
-        style.appendChild(document.createTextNode(css));
-        head.appendChild(style);
-*/
+        /*
+                const css = `
+                `;
+                const head = document.head || document.getElementsByTagName('head')[0];
+                const style = document.createElement('style');
+        
+                style.type = 'text/css';
+                style.appendChild(document.createTextNode(css));
+                head.appendChild(style);
+        */
     }
 
 }

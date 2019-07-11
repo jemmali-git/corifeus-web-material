@@ -4,15 +4,15 @@ import {
 } from '@angular/core';
 
 @Component({
-        selector: 'cory-mat-loading',
-        template: `
+    selector: 'cory-mat-loading',
+    template: `
 <mat-progress-bar
 style="position: fixed; top: 0px; left: 0px; width: 100%; z-index: 100000;"
 *ngIf="visible || requestCount > 0"
 color="primary"
 mode="indeterminate"></mat-progress-bar>
 `,
-    })
+})
 export class Loading {
 
     @Input('cory-visible')
@@ -23,6 +23,6 @@ export class Loading {
     }
 
     constructor() {
-     //   console.log(this.visible);
+        //   console.log(this.visible);
     }
 }

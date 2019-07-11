@@ -37,7 +37,7 @@ export class TranslationMenu {
 
     constructor(
         private notify: NotifyService,
-        protected locale: LocaleService,
+        public locale: LocaleService,
         protected settingsAll: SettingsService
     ) {
         this.settings = settingsAll.data.core;
@@ -51,7 +51,7 @@ export class TranslationMenu {
         try {
             this.locale.setTranslation(translation);
             this.notify.info(this.settingsAll.data.core.translations.display[translation]);
-        } catch(e) {
+        } catch (e) {
             console.error(e);
         }
     }

@@ -2,7 +2,7 @@ import {
     Injectable,
 } from '@angular/core';
 
-import { kebabCase } from 'lodash';
+import {kebabCase} from 'lodash';
 
 import {SettingsService, CookieService} from 'corifeus-web';
 
@@ -18,7 +18,7 @@ export class ThemeService {
 
     private original: string;
 
-    private all : string[];
+    private all: string[];
 
     private settings: any;
 
@@ -29,7 +29,7 @@ export class ThemeService {
     constructor(
         private cookies: CookieService,
         private settingsAll: SettingsService,
-//        private overlayContainer: OverlayContainer
+        //        private overlayContainer: OverlayContainer
     ) {
     }
 
@@ -39,7 +39,7 @@ export class ThemeService {
         this.original = this.settings.themes.material[0]
         this.current = this.original;
 
-        this.all = this.settings.themes.material.map((element : string) => {
+        this.all = this.settings.themes.material.map((element: string) => {
             return kebabCase(element)
         })
 
@@ -51,13 +51,13 @@ export class ThemeService {
             } else {
                 this.setTheme(this.original);
             }
-        } catch(e) {
+        } catch (e) {
             this.setTheme(this.original);
         }
 
     }
 
-    setTheme(newTheme : string)  {
+    setTheme(newTheme: string) {
         newTheme = kebabCase(newTheme);
         if (this.all.indexOf(newTheme) > -1) {
             const body = document.getElementsByTagName("body")[0];

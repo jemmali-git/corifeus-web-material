@@ -25,9 +25,8 @@ export class Layout {
         private router: web.RouterService,
         private route: ngRouter.ActivatedRoute,
         public locale: web.LocaleService
-
     ) {
-        this.locale.subscribe((subsciber : web.LocaleSubject) => {
+        this.locale.subscribe((subsciber: web.LocaleSubject) => {
             this.i18n = subsciber.locale.data;
         })
 
@@ -38,7 +37,7 @@ export class Layout {
         this.router.events.subscribe((event) => {
             if (event instanceof ngRouter.NavigationEnd) {
                 const navEvent = <ngRouter.NavigationEnd>event;
-                switch(navEvent.url) {
+                switch (navEvent.url) {
                     case '/login':
                         this.type = 'raw';
                         break;

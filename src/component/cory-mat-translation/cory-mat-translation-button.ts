@@ -32,7 +32,7 @@ export class TranslationButton {
     color: string = 'default';
 
     @Input('cory-tooltip-position')
-    matTooltipPosition: string  = 'left';
+    matTooltipPosition: string = 'left';
 
     i18n: any;
 
@@ -54,14 +54,14 @@ export class TranslationButton {
             this.setTooltip();
         });
 
-        this.mediaQuery.subscribe((settings : MediaQuerySetting[]) => {
+        this.mediaQuery.subscribe((settings: MediaQuerySetting[]) => {
             settings.forEach((setting) => this.setTooltip(setting.name))
         })
     }
 
     private setTooltip(alias?: string) {
         if (alias !== undefined) {
-            this.currentWidthAlias= alias;
+            this.currentWidthAlias = alias;
         }
         switch (this.currentWidthAlias) {
             case 'small':
@@ -74,8 +74,6 @@ export class TranslationButton {
                 break;
         }
     }
-
-
 
 
 }

@@ -38,7 +38,7 @@ export class ThemeButton {
 
     settings: any;
 
-    tooltip: string ;
+    tooltip: string;
 
     currentWidthAlias: string;
 
@@ -54,14 +54,14 @@ export class ThemeButton {
             this.setTooltip();
         });
 
-        this.mediaQuery.subscribe((settings : MediaQuerySetting[]) => {
+        this.mediaQuery.subscribe((settings: MediaQuerySetting[]) => {
             settings.forEach((setting) => this.setTooltip(setting.name))
         })
     }
 
     private setTooltip(alias?: string) {
         if (alias !== undefined) {
-            this.currentWidthAlias= alias;
+            this.currentWidthAlias = alias;
         }
         switch (this.currentWidthAlias) {
             case 'small':
@@ -75,8 +75,6 @@ export class ThemeButton {
         }
 
     }
-
-
 
 
 }

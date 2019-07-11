@@ -2,69 +2,74 @@
 @import '@angular/material/theming';
 
 .cory-mat-theme-light {
-  .cory-mat-sidenav {
-    mat-list-item.active {
-      background-color: mat-color($mat-grey, 200);
+    .cory-mat-sidenav {
+        mat-list-item.active {
+            background-color: mat-color($mat-grey, 200);
+        }
+
+        mat-list-item:hover {
+            background-color: mat-color($mat-grey, 300);
+        }
     }
-    mat-list-item:hover {
-      background-color: mat-color($mat-grey, 300);
-    }
-  }
 }
 
 .cory-mat-theme-dark {
-  .cory-mat-sidenav {
-    mat-list-item.active {
-      background-color: mat-color($mat-grey, A700);
+    .cory-mat-sidenav {
+        mat-list-item.active {
+            background-color: mat-color($mat-grey, A700);
+        }
+
+        mat-list-item:hover {
+            background-color: mat-color($mat-grey, A400);
+        }
     }
-    mat-list-item:hover {
-      background-color: mat-color($mat-grey, A400);
-    }
-  }
 }
 
 .cory-mat-sidenav {
-  min-width: 250px;
-  position: relative;
-  mat-list-item {
-    cursor: pointer;
-  }
+    min-width: 250px;
+    position: relative;
+
+    mat-list-item {
+        cursor: pointer;
+    }
 }
 
 .cory-mat-sidenav-container {
-  background-color: transparent !important;
-  display: flex;
-  height: 100%;
-  align-items: center;
-  justify-content: center;
+    background-color: transparent !important;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
 }
 
 .cory-mat-sidenav-content {
-  height: 100vh;
-  min-height: 100vh;
+    height: 100vh;
+    min-height: 100vh;
 }
 
 body {
-  height: 100vh;
-  min-height: 100vh;
+    height: 100vh;
+    min-height: 100vh;
 }
 
 .cory-mat-form-full-width md-input-container {
-  width: 100%;
+    width: 100%;
 }
 
 cory-web-material-test-login {
-  .flex-container {
-    height: 100%;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .row {
-    width: auto;
-  }
-  .flex-item {
-  }
+    .flex-container {
+        height: 100%;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .row {
+        width: auto;
+    }
+
+    .flex-item {
+    }
 }

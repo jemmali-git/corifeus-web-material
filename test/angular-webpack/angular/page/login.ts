@@ -3,8 +3,8 @@ import {
     Injectable,
 } from '@angular/core';
 
-import { AuthService } from 'corifeus-web';
-import { NotifyService } from '../../../../src';
+import {AuthService} from 'corifeus-web';
+import {NotifyService} from '../../../../src';
 
 @Component({
     selector: 'cory-web-material-test-login',
@@ -45,7 +45,7 @@ export class Login {
             const result = await this.auth.verify()
             console.log(result);
             this.notify.info('Verified');
-        } catch(e) {
+        } catch (e) {
             this.notify.error(e)
         }
     }
@@ -56,7 +56,7 @@ export class Login {
             const result = await this.auth.prolongate()
             console.log(result);
             this.notify.info('Prolongated');
-        } catch(e) {
+        } catch (e) {
             this.notify.error(e)
         }
     }
