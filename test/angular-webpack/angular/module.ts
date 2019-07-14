@@ -14,6 +14,7 @@ import {FullPage} from './page/full-page';
 import {Raw} from './page/raw';
 
 import {Layout} from './layout';
+import {Login as LoginComponent} from './component/cory-mat-login/cory-mat-login'
 
 
 import {routes} from './routes';
@@ -30,9 +31,15 @@ import {
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import {MatDatepickerModule} from '@angular/material/datepicker';
-import {MatNativeDateModule} from '@angular/material/';
+import {MatNativeDateModule} from '@angular/material/core';
+import {MatInputModule,} from '@angular/material/input'
+import {MatCheckboxModule,} from '@angular/material/checkbox'
+
 import {MatListModule} from '@angular/material/list';
 import {MatDividerModule} from '@angular/material/divider';
+import {
+    FormsModule, ReactiveFormsModule
+} from '@angular/forms';
 
 /***
  * NEVER USE A EXPORT * AS, NEED THE EXACT COMPONENT FOR INJECTABLE FUNCTION!!!!
@@ -40,8 +47,12 @@ import {MatDividerModule} from '@angular/material/divider';
 
 @NgModule({
     imports: [
-
+        FormsModule,
+        ReactiveFormsModule,
         MatSidenavModule,
+        MatInputModule,
+        MatCheckboxModule,
+
         MatSlideToggleModule,
         MatDatepickerModule,
         MatNativeDateModule,
@@ -52,10 +63,11 @@ import {MatDividerModule} from '@angular/material/divider';
         CorifeusMaterialModule,
     ],
     declarations: [
+        Login,
+        LoginComponent,
         Application,
         Layout,
         Components,
-        Login,
         FullPage,
         Raw,
     ],

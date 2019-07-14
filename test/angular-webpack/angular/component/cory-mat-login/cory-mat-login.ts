@@ -20,11 +20,11 @@ import {
 
 import {
     NotifyService
-} from '../../services/notify/notify';
+} from '../../../../../src/services/notify/notify';
 
 import {
     ThemeService
-} from '../../services/theme';
+} from '../../../../../src/services/theme';
 
 
 // requires to be in a mat-menu

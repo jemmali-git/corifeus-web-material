@@ -23,6 +23,3 @@ export {
     Http404
 } from './cory-mat-http-404';
 
-export {
-    Login
-} from './cory-mat-login/cory-mat-login';

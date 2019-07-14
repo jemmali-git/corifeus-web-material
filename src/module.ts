@@ -8,9 +8,7 @@ import {MatMenuModule,} from '@angular/material/menu'
 import {MatButtonModule,} from '@angular/material/button'
 import {MatTooltipModule,} from '@angular/material/tooltip'
 import {MatToolbarModule,} from '@angular/material/toolbar'
-import {MatInputModule,} from '@angular/material/input'
 import {MatCardModule,} from '@angular/material/card'
-import {MatCheckboxModule,} from '@angular/material/checkbox'
 import {MatSnackBarModule,} from '@angular/material/snack-bar'
 
 import {Boot} from './boot';
@@ -22,7 +20,6 @@ import {NotifyComponent} from './services/notify/notify-component'
 
 import {Http404} from './component/cory-mat-http-404'
 import {Loading} from './component/cory-mat-loading'
-import {Login} from './component/cory-mat-login/cory-mat-login'
 
 
 import {ThemeButton} from './component/cory-mat-theme/cory-mat-theme-button'
@@ -132,9 +129,8 @@ import {TranslationMenu} from './component/cory-mat-translation/cory-mat-transla
         MatButtonModule,
         MatTooltipModule,
         MatToolbarModule,
-        MatInputModule,
+
         MatCardModule,
-        MatCheckboxModule,
         MatSnackBarModule,
 
         // material modules
@@ -152,7 +148,7 @@ import {TranslationMenu} from './component/cory-mat-translation/cory-mat-transla
         TranslationButton,
 
         Http404,
-        Login,
+
 
     ],
 
@@ -207,9 +203,7 @@ import {TranslationMenu} from './component/cory-mat-translation/cory-mat-transla
         MatButtonModule,
         MatTooltipModule,
         MatToolbarModule,
-        MatInputModule,
         MatCardModule,
-        MatCheckboxModule,
         MatSnackBarModule,
 
         Loading,
@@ -222,7 +216,7 @@ import {TranslationMenu} from './component/cory-mat-translation/cory-mat-transla
 
         Http404,
 
-        Login,
+
 
     ],
     entryComponents: [
