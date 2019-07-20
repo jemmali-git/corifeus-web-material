@@ -1,6 +1,5 @@
 import {NgModule, ModuleWithProviders} from '@angular/core';
 import {CorifeusModule} from 'corifeus-web';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 import {MatIconModule} from '@angular/material/icon'
 import {MatProgressBarModule} from '@angular/material/progress-bar'
@@ -27,6 +26,8 @@ import {ThemeMenu} from './component/cory-mat-theme/cory-mat-theme-menu'
 
 import {TranslationButton} from './component/cory-mat-translation/cory-mat-translation-button'
 import {TranslationMenu} from './component/cory-mat-translation/cory-mat-translation-menu'
+
+import { CommonModule } from '@angular/common'
 
 /*
  fix: allow users to disable the sanity checks
@@ -91,7 +92,7 @@ import {TranslationMenu} from './component/cory-mat-translation/cory-mat-transla
 @NgModule({
     imports: [
         CorifeusModule,
-        BrowserAnimationsModule,
+        CommonModule,
 
         // material
         /*
@@ -160,7 +161,6 @@ import {TranslationMenu} from './component/cory-mat-translation/cory-mat-transla
     ],
     exports: [
         CorifeusModule,
-        BrowserAnimationsModule,
 
         // material modules
         /*

@@ -10,7 +10,7 @@
   
 [![NPM](https://nodei.co/npm/corifeus-web-material.png?downloads=true&downloadRank=true)](https://www.npmjs.com/package/corifeus-web-material/)
 ---
-# 🌴 Corifeus Web Material v2019.10.403  
+# 🌴 Corifeus Web Material v2019.10.413  
 
   
 **Note about versioning:** Versions are cut in Major.Minor.Patch schema. Major is always the current year. Minor is either 4 (January - June) or 10 (July - December). Patch is incremental by every build. If there is a breaking change, it should be noted in the readme.
@@ -37,7 +37,7 @@ https://nodejs.org/en/download/package-manager/
 # Built on Angular
 
 ```text
-8.1.1
+8.1.2
 ```
             
 
@@ -87,7 +87,7 @@ https://github.com/angular/material2/issues/4229#issuecomment-296611188
 ```
 
 ## ElementRef Material
-The default ```@ViewChild``` is not ElementcorifeuRef with Material.
+The default ```@ViewChild``` is not `ElementRef` with Material.
 Need to use like:
 ```typescript
 @ViewChild('elementButton', {read: ElementRef}) elementButton : ElementRef;
@@ -101,49 +101,7 @@ https://github.com/angular/material2/blob/master/src/lib/core/theming/_theming.s
 ## Colors
 monochromatic, analogous, complementary, tradic 
 
-# Issue
 
-Cannot enable prod mode.
-## Works
-```json
-{
- "compilerOptions": {
-    "skipLibCheck": true,
-    "outDir": "build/aot",
-    "target": "es2015",
-    "module": "commonjs",
- }
-}
-```
-
-## Not working
-```json
-{
- "compilerOptions": {
-    "skipLibCheck": true,
-    "outDir": "build/aot",
-    "target": "es2015",
-    "module": "esnext",
- }
-}
-```
-
-```text
-core.js:6065 Uncaught Error: Cannot enable prod mode after platform setup.
-    at enableProdMode (core.js:6065)
-    at Module.<anonymous> (bundle.aot.ts:3)
-    at __webpack_require__ (bootstrap:19)
-    at bootstrap:83
-    at bootstrap:83
-enableProdMode @ core.js:6065
-(anonymous) @ bundle.aot.ts:3
-__webpack_require__ @ bootstrap:19
-(anonymous) @ bootstrap:83
-(anonymous) @ bootstrap:83
-```
-    
-    
-    
 
 [//]: #@corifeus-footer
 
@@ -157,7 +115,7 @@ All my domains ([patrikx3.com](https://patrikx3.com) and [corifeus.com](https://
   
 ---
   
-[**CORIFEUS-WEB-MATERIAL**](https://pages.corifeus.com/corifeus-web-material) Build v2019.10.403 
+[**CORIFEUS-WEB-MATERIAL**](https://pages.corifeus.com/corifeus-web-material) Build v2019.10.413 
 
 [![Donate for Corifeus / P3X](https://img.shields.io/badge/Donate-Corifeus-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software) 
 

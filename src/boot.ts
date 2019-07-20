@@ -19,6 +19,8 @@ import {
     LocaleService
 } from 'corifeus-web';
 
+
+//let booted = false
 @Injectable()
 export class Boot {
 
@@ -27,6 +29,10 @@ export class Boot {
         private locale: LocaleService,
         private theme: ThemeService,
     ) {
+  //      if (booted === true) {
+  //          return
+  //      }
+  //      booted = true
         log('booted');
 
 

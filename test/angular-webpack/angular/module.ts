@@ -40,6 +40,7 @@ import {MatDividerModule} from '@angular/material/divider';
 import {
     FormsModule, ReactiveFormsModule
 } from '@angular/forms';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 /***
  * NEVER USE A EXPORT * AS, NEED THE EXACT COMPONENT FOR INJECTABLE FUNCTION!!!!
@@ -47,6 +48,7 @@ import {
 
 @NgModule({
     imports: [
+        BrowserAnimationsModule,
         FormsModule,
         ReactiveFormsModule,
         MatSidenavModule,
