@@ -54,12 +54,11 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
         MatSidenavModule,
         MatInputModule,
         MatCheckboxModule,
-
         MatSlideToggleModule,
         MatDatepickerModule,
         MatNativeDateModule,
-        MatListModule, MatDividerModule,
-
+        MatListModule,
+        MatDividerModule,
         CorifeusModule,
         RouterModule.forRoot(routes),
         CorifeusMaterialModule,
@@ -84,4 +83,4 @@ export class Module {
         const json = require('../json/settings.core.json');
         settings.extend('core', json);
     }
-};
+}

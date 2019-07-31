@@ -123,34 +123,25 @@ import { CommonModule } from '@angular/common'
                 */
 //        OverlayContainer,
 //        MatSelectionList,
-
         MatIconModule,
         MatProgressBarModule,
         MatMenuModule,
         MatButtonModule,
         MatTooltipModule,
         MatToolbarModule,
-
         MatCardModule,
         MatSnackBarModule,
-
         // material modules
-
     ],
     declarations: [
         NotifyComponent,
-//        OverlayContainer,
+//      OverlayContainer,
         Loading,
-
         ThemeMenu,
         ThemeButton,
-
         TranslationMenu,
         TranslationButton,
-
         Http404,
-
-
     ],
 
     // do not need export providers
@@ -161,7 +152,6 @@ import { CommonModule } from '@angular/common'
     ],
     exports: [
         CorifeusModule,
-
         // material modules
         /*
         MatAutocompleteModule,
@@ -205,19 +195,12 @@ import { CommonModule } from '@angular/common'
         MatToolbarModule,
         MatCardModule,
         MatSnackBarModule,
-
         Loading,
-
         ThemeMenu,
         ThemeButton,
-
         TranslationMenu,
         TranslationButton,
-
         Http404,
-
-
-
     ],
     entryComponents: [
         NotifyComponent,
@@ -227,7 +210,6 @@ import { CommonModule } from '@angular/common'
 export class CorifeusMaterialModule {
 
     constructor(boot: Boot) {
-
     }
 
     public static forRoot(): ModuleWithProviders {
