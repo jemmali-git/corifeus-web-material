@@ -43,7 +43,6 @@ export class Login {
     public async verify() {
         try {
             const result = await this.auth.verify()
-            console.log(result);
             this.notify.info('Verified');
         } catch (e) {
             this.notify.error(e)
@@ -54,7 +53,6 @@ export class Login {
     public async prolongate() {
         try {
             const result = await this.auth.prolongate()
-            console.log(result);
             this.notify.info('Prolongated');
         } catch (e) {
             this.notify.error(e)
