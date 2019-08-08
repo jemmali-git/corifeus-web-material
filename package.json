@@ -1,11 +1,11 @@
 {
     "name": "corifeus-web-material",
-    "version": "2019.10.449",
+    "version": "2019.10.454",
     "corifeus": {
         "icon": "fas fa-tint",
         "code": "Amazing",
         "publish": true,
-        "nodejs": "v12.7.0",
+        "nodejs": "v12.8.0",
         "reponame": "corifeus-web-material",
         "opencollective": false,
         "build": true,
@@ -37,15 +37,15 @@
     "devDependencies": {
         "@angular/forms": "=8.2.0",
         "@types/hammerjs": "^2.0.36",
-        "corifeus-builder-angular": "^2019.10.364"
+        "corifeus-builder-angular": "^2019.10.368"
     },
     "dependencies": {
         "@angular/animations": "=8.2.0",
         "@angular/cdk": "^8.1.2",
         "@angular/material": "^8.1.2",
-        "@fortawesome/fontawesome-free": "^5.10.0",
+        "@fortawesome/fontawesome-free": "^5.10.1",
         "@types/lodash": "^4.14.136",
-        "corifeus-web": "^2019.10.431",
+        "corifeus-web": "^2019.10.435",
         "hammerjs": "^2.0.8",
         "lodash": "^4.17.15",
         "material-design-icons": "^3.0.1",
