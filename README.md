@@ -10,7 +10,7 @@
   
 [![NPM](https://nodei.co/npm/corifeus-web-material.png?downloads=true&downloadRank=true)](https://www.npmjs.com/package/corifeus-web-material/)
 ---
-# 🌴 Corifeus Web Material v2019.10.457  
+# 🌴 Corifeus Web Material v2019.10.460  
 
   
 
@@ -24,7 +24,7 @@
    
 ### Built on Node 
 ``` 
-v12.8.0
+v12.8.1
 ```   
    
 The ```async``` and ```await``` keywords are required.
@@ -36,7 +36,7 @@ https://nodejs.org/en/download/package-manager/
 # Built on Angular
 
 ```text
-8.2.2
+8.2.3
 ```
             
 
@@ -117,7 +117,7 @@ All my domains ([patrikx3.com](https://patrikx3.com) and [corifeus.com](https://
 
 ---
   
-[**CORIFEUS-WEB-MATERIAL**](https://pages.corifeus.com/corifeus-web-material) Build v2019.10.457 
+[**CORIFEUS-WEB-MATERIAL**](https://pages.corifeus.com/corifeus-web-material) Build v2019.10.460 
 
 [![Donate for Corifeus / P3X](https://img.shields.io/badge/Donate-Corifeus-003087.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QZVM4V6HVZJW6)  [![Contact Corifeus / P3X](https://img.shields.io/badge/Contact-P3X-ff9900.svg)](https://www.patrikx3.com/en/front/contact) [![Like Corifeus @ Facebook](https://img.shields.io/badge/LIKE-Corifeus-3b5998.svg)](https://www.facebook.com/corifeus.software) 
 

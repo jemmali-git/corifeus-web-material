@@ -1,15 +1,15 @@
 {
     "name": "corifeus-web-material",
-    "version": "2019.10.458",
+    "version": "2019.10.461",
     "corifeus": {
         "icon": "fas fa-tint",
         "code": "Amazing",
         "publish": true,
-        "nodejs": "v12.8.0",
+        "nodejs": "v12.8.1",
         "reponame": "corifeus-web-material",
         "opencollective": false,
         "build": true,
-        "angular": "8.2.2"
+        "angular": "8.2.3"
     },
     "description": "🌴 Corifeus Web Material",
     "main": "src/index.ts",
@@ -35,17 +35,17 @@
     },
     "homepage": "https://pages.corifeus.com/corifeus-web-material",
     "devDependencies": {
-        "@angular/forms": "=8.2.2",
+        "@angular/forms": "=8.2.3",
         "@types/hammerjs": "^2.0.36",
-        "corifeus-builder-angular": "^2019.10.372"
+        "corifeus-builder-angular": "^2019.10.375"
     },
     "dependencies": {
-        "@angular/animations": "=8.2.2",
-        "@angular/cdk": "^8.1.2",
-        "@angular/material": "^8.1.2",
-        "@fortawesome/fontawesome-free": "^5.10.1",
-        "@types/lodash": "^4.14.136",
-        "corifeus-web": "^2019.10.439",
+        "@angular/animations": "=8.2.3",
+        "@angular/cdk": "^8.1.3",
+        "@angular/material": "^8.1.3",
+        "@fortawesome/fontawesome-free": "^5.10.2",
+        "@types/lodash": "^4.14.137",
+        "corifeus-web": "^2019.10.442",
         "hammerjs": "^2.0.8",
         "lodash": "^4.17.15",
         "material-design-icons": "^3.0.1",
